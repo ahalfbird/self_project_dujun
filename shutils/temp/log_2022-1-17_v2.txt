@@ -1,0 +1,1271 @@
+C:\Users\admin>adb logcat -b all | grep -i -e nfc -e nq-nci -e nxp -e pn5
+01-14 01:08:03.176     0     0 I         : Kernel command line: rcupdate.rcu_expedited=1 console=ttyMSM0,115200,n8 androidboot.console=ttyMSM0 earlycon=msm_serial_d
+m,0xc170000 androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x37 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 sched_enable_hmp=1 sched_enable_power_aware=1 se
+rvice_locator.enable=1 swiotlb=1 loop.max_part=7 buildvariant=userdebug veritykeyid=id:7e4333f9bba00adfe0ede979e28ed1920492b40f root=/dev/dm-0 dm="system none ro,0
+1 android-verity /dev/mmcblk0p16" androidboot.verifiedbootstate=orange androidboot.keymaster=1  androidboot.veritymode=enforcing androidboot.bootdevice=c0c4000.sdhc
+i androidboot.serialno=12345678 androidboot.countrycode=00 androidboot.keypadcode=0 androidboot.pcbserialno=12345678 androidboot.nfcmodel=0 androidboot.gpiotest=0 a
+ndroidboot.baseband=msm mdss_mdp.panel=1:dsi:0:qcom,mdss_dsi_hx8399c_fhd_video:config0:1:none:cfg:single_dsi androidboot.slot_suffix=_a skip_initramfs rootwait ro i
+nit=/init androidboot.dtb_idx=-1347440721
+01-14 01:08:13.402     0     0 I         : pn54x_dev_init
+01-14 01:08:13.414     0     0 E nq-nci 6-0028: nqx_probe: enter
+01-14 01:08:13.415     0     0 E nq-nci 6-0028: nqx_probe, inside nfc-nci flags = 0
+01-14 01:08:13.517     0     0 E nq-nci 6-0028: nfcc_hw_check: - nq - reset cmd answer : NfcNciRx 40 0 3
+01-14 01:08:13.524     0     0 E nq-nci 6-0028: NQ NFCC chip_type = 88
+01-14 01:08:13.532     0     0 E nq-nci 6-0028: NQ fw version = 10.1.a0
+01-14 01:08:17.291     0     0 E nq-nci 6-0028: nfcc_hw_check: - NFCC HW not Supported
+01-14 01:08:17.292     0     0 E nq-nci 6-0028: nqx_probe: probing NFCC NQxxx exited successfully
+01-14 01:08:21.753     0     0 I init    : Parsing file /vendor/etc/init/android.hardware.nfc@1.2-service.rc...
+01-14 01:08:21.943     0     0 I init    : Parsing file /vendor/etc/init/init.sdm660_64.nfc.rc...
+01-14 01:08:30.540     0     0 I init    : processing action (post-fs-data) from (/vendor/etc/init/init.sdm660_64.nfc.rc:1)
+01-14 01:08:30.540     0     0 E selinux : avc:  denied  { set } for property=ro.nfc.port pid=592 uid=0 gid=0 scontext=u:r:vendor_init:s0 tcontext=u:object_r:defaul
+t_prop:s0 tclass=property_service permissive=0
+01-14 01:08:30.540     0     0 E init    : Subcontext init could not set 'ro.nfc.port' to 'I2C': SELinux permission check failed
+01-14 01:08:32.095     0     0 I init    : starting service 'vendor.nfc_hal_service'...
+01-14 01:08:55.270     0     0 I init    : processing action (post-fs-data) from (/vendor/etc/init/init.sdm660_64.nfc.rc:1)
+01-14 01:08:55.270     0     0 E selinux : avc:  denied  { set } for property=ro.nfc.port pid=592 uid=0 gid=0 scontext=u:r:vendor_init:s0 tcontext=u:object_r:defaul
+t_prop:s0 tclass=property_service permissive=0
+01-14 01:08:55.271     0     0 E init    : Subcontext init could not set 'ro.nfc.port' to 'I2C': SELinux permission check failed
+01-14 01:08:56.242     0     0 E init    : Could not start service 'nqnfcinfo' as part of class 'late_start': Cannot find '/system/vendor/bin/nqnfcinfo': No such fi
+le or directory
+01-14 01:09:00.682  1881  1881 I PackageManager: Un-granting permission android.permission.MOUNT_UNMOUNT_FILESYSTEMS from package com.ksxy.nfc.demo.sdk (protectionL
+evel=18 flags=0x3808be44)
+01-14 01:09:03.008  1881  1881 I PackageManager: Un-granting permission android.permission.MOUNT_UNMOUNT_FILESYSTEMS from package com.ksxy.nfc.demo.sdk (protectionL
+evel=18 flags=0x3888be44)
+01-14 01:09:03.786  1881  1881 I PackageManager: Un-granting permission android.permission.MOUNT_UNMOUNT_FILESYSTEMS from package com.ksxy.nfc.demo.sdk (protectionL
+evel=18 flags=0x3888be44)
+01-14 01:09:10.498  1881  1937 I am_proc_start: [0,3122,1027,com.android.nfc,added application,com.android.nfc]
+01-14 01:09:10.498  1881  1937 I ActivityManager: Start proc 3122:com.android.nfc/1027 for added application com.android.nfc
+01-14 01:09:10.646  1881  1915 I am_proc_bound: [0,3122,com.android.nfc]
+01-14 01:09:10.692  3122  3122 I chatty  : uid=1027(nfc) com.android.nfc expire 32 lines
+01-14 01:09:10.742   608   608 I auditd  : avc:  denied  { find } for interface=vendor.qti.hardware.perf::IPerf sid=u:r:nfc:s0 pid=3122 scontext=u:r:nfc:s0 tcontext
+=u:object_r:hal_perf_hwservice:s0 tclass=hwservice_manager permissive=0
+01-14 01:09:10.744   608   608 I auditd  : avc:  denied  { find } for interface=vendor.qti.hardware.perf::IPerf sid=u:r:nfc:s0 pid=3122 scontext=u:r:nfc:s0 tcontext
+=u:object_r:hal_perf_hwservice:s0 tclass=hwservice_manager permissive=0
+01-14 01:09:10.931   608   608 I auditd  : avc:  denied  { find } for interface=vendor.nxp.nxpnfc::INxpNfc sid=u:r:nfc:s0 pid=3122 scontext=u:r:nfc:s0 tcontext=u:ob
+ject_r:nxpnfc_hwservice:s0 tclass=hwservice_manager permissive=0
+01-14 01:09:10.942   766   766 I chatty  : uid=1027(nfc) /vendor/bin/hw/android.hardware.nfc@1.2-service expire 144 lines
+01-14 01:09:11.175  3122  3334 I chatty  : uid=1027(nfc) AsyncTask #1 expire 100 lines
+01-14 01:09:11.183   608   608 I auditd  : avc:  denied  { find } for interface=vendor.qti.hardware.perf::IPerf sid=u:r:nfc:s0 pid=3122 scontext=u:r:nfc:s0 tcontext
+=u:object_r:hal_perf_hwservice:s0 tclass=hwservice_manager permissive=0
+01-14 01:09:11.206  3122  3340 I chatty  : uid=1027(nfc) com.android.nfc expire 8 lines
+01-14 01:09:11.211  3122  3339 I chatty  : uid=1027(nfc) AsyncTask #1 expire 5 lines
+01-14 01:09:11.215  3122  3344 I chatty  : uid=1027(nfc) AsyncTask #1 expire 411 lines
+01-14 01:09:11.228   608   608 I auditd  : avc:  denied  { find } for interface=vendor.nxp.nxpese::INxpEse sid=u:r:hal_nfc_default:s0 pid=766 scontext=u:r:hal_nfc_d
+efault:s0 tcontext=u:object_r:default_android_hwservice:s0 tclass=hwservice_manager permissive=0
+01-14 01:09:11.240     0     0 E nq-nci 6-0028: nfc_open: 10,58
+01-14 01:09:11.240     0     0 E nq-nci 6-0028: gpio_set_value disable: nfc_ioctl_power_states: info: ffffffc36dd35a00
+01-14 01:09:11.254     0     0 E nq-nci 6-0028: gpio_set_value enable: nfc_ioctl_power_states: info: ffffffc36dd35a00
+01-14 01:09:11.263   766  3357 I chatty  : uid=1027(nfc) /vendor/bin/hw/android.hardware.nfc@1.2-service expire 158 lines
+01-14 01:09:11.266   766  3359 I chatty  : uid=1027(nfc) /vendor/bin/hw/android.hardware.nfc@1.2-service expire 82 lines
+01-14 01:09:11.267   766  3355 I chatty  : uid=1027(nfc) /vendor/bin/hw/android.hardware.nfc@1.2-service expire 154 lines
+01-14 01:09:11.278     0     0 E nq-nci 6-0028: nfc_read : reading 3 bytes.
+01-14 01:09:11.291     0     0 E nq-nci 6-0028: nfc_read : reading 3 bytes.
+01-14 01:09:11.295     0     0 E nq-nci 6-0028: nfc_read : reading 25 bytes.
+01-14 01:09:11.297     0     0 E nq-nci 6-0028: nfc_read : reading 3 bytes.
+01-14 01:09:11.312     0     0 E nq-nci 6-0028: nfc_read : reading 6 bytes.
+01-14 01:09:11.317  3122  3275 I chatty  : uid=1027(nfc) HwBinder:3122_1 expire 2 lines
+01-14 01:09:11.318     0     0 E nq-nci 6-0028: nfc_read : reading 3 bytes.
+01-14 01:09:11.321     0     0 E nq-nci 6-0028: nfc_read : reading 6 bytes.
+01-14 01:09:11.328     0     0 E nq-nci 6-0028: nfc_read : reading 3 bytes.
+01-14 01:09:11.359     0     0 E nq-nci 6-0028: nfc_read : reading 3 bytes.
+01-14 01:09:11.367     0     0 E nq-nci 6-0028: nfc_read : reading 25 bytes.
+01-14 01:09:11.371     0     0 E nq-nci 6-0028: nfc_read : reading 3 bytes.
+01-14 01:09:11.372     0     0 E nq-nci 6-0028: nfc_read : reading 5 bytes.
+01-14 01:09:11.378     0     0 E nq-nci 6-0028: nfc_read : reading 3 bytes.
+01-14 01:09:11.382     0     0 E nq-nci 6-0028: nfc_read : reading 2 bytes.
+01-14 01:09:11.389     0     0 E nq-nci 6-0028: nfc_read : reading 3 bytes.
+01-14 01:09:11.394     0     0 E nq-nci 6-0028: nfc_read : reading 37 bytes.
+01-14 01:09:11.400     0     0 E nq-nci 6-0028: nfc_read : reading 3 bytes.
+01-14 01:09:11.406     0     0 E nq-nci 6-0028: nfc_read : reading 14 bytes.
+01-14 01:09:11.409     0     0 E nq-nci 6-0028: nfc_read : reading 3 bytes.
+01-14 01:09:11.415     0     0 E nq-nci 6-0028: nfc_read : reading 2 bytes.
+01-14 01:09:11.420     0     0 E nq-nci 6-0028: nfc_read : reading 3 bytes.
+01-14 01:09:11.442     0     0 E nq-nci 6-0028: nfc_read : reading 2 bytes.
+01-14 01:09:11.444     0     0 E nq-nci 6-0028: nfc_read : reading 3 bytes.
+01-14 01:09:11.462     0     0 E nq-nci 6-0028: nfc_read : reading 1 bytes.
+01-14 01:09:11.465     0     0 E nq-nci 6-0028: nfc_read : reading 3 bytes.
+01-14 01:09:11.474     0     0 E nq-nci 6-0028: nfc_read : reading 2 bytes.
+01-14 01:09:11.476     0     0 E nq-nci 6-0028: nfc_read : reading 3 bytes.
+01-14 01:09:11.480     0     0 E nq-nci 6-0028: nfc_read : reading 2 bytes.
+01-14 01:09:11.491     0     0 E nq-nci 6-0028: nfc_read : reading 3 bytes.
+01-14 01:09:11.491     0     0 E nq-nci 6-0028: nfc_read : reading 5 bytes.
+01-14 01:09:11.504     0     0 E nq-nci 6-0028: nfc_read : reading 3 bytes.
+01-14 01:09:11.505     0     0 E nq-nci 6-0028: nfc_read : reading 1 bytes.
+01-14 01:09:11.510     0     0 E nq-nci 6-0028: nfc_read : reading 3 bytes.
+01-14 01:09:11.514     0     0 E nq-nci 6-0028: nfc_read : reading 4 bytes.
+01-14 01:09:11.527     0     0 E nq-nci 6-0028: nfc_read : reading 3 bytes.
+01-14 01:09:11.532     0     0 E nq-nci 6-0028: nfc_read : reading 3 bytes.
+01-14 01:09:11.537     0     0 E nq-nci 6-0028: nfc_read : reading 10 bytes.
+01-14 01:09:11.547     0     0 E nq-nci 6-0028: nfc_read : reading 3 bytes.
+01-14 01:09:11.548     0     0 E nq-nci 6-0028: nfc_read : reading 5 bytes.
+01-14 01:09:11.554     0     0 E nq-nci 6-0028: nfc_read : reading 3 bytes.
+01-14 01:09:11.557     0     0 E nq-nci 6-0028: nfc_read : reading 2 bytes.
+01-14 01:09:11.565     0     0 E nq-nci 6-0028: nfc_read : reading 3 bytes.
+01-14 01:09:11.574     0     0 E nq-nci 6-0028: nfc_read : reading 3 bytes.
+01-14 01:09:13.569     0     0 E nq-nci 6-0028: nfc_write: failed to write -107
+01-14 01:09:13.598     0     0 E nq-nci 6-0028: nfc_read : reading 3 bytes.
+01-14 01:09:13.610     0     0 E nq-nci 6-0028: nfc_read : reading 3 bytes.
+01-14 01:09:13.621     0     0 E nq-nci 6-0028: nfc_read : reading 5 bytes.
+01-14 01:09:13.623  3122  3550 I chatty  : uid=1027(nfc) Thread-4 expire 18 lines
+01-14 01:09:13.625  3122  3547 I chatty  : uid=1027(nfc) Thread-2 expire 18 lines
+01-14 01:09:13.625  3122  3549 I chatty  : uid=1027(nfc) Thread-3 expire 21 lines
+01-14 01:09:13.627     0     0 E nq-nci 6-0028: nfc_read : reading 3 bytes.
+01-14 01:09:13.664     0     0 E nq-nci 6-0028: nfc_read : reading 1 bytes.
+01-14 01:09:13.666     0     0 E nq-nci 6-0028: nfc_read : reading 3 bytes.
+01-14 01:09:13.688     0     0 E nq-nci 6-0028: nfc_read : reading 2 bytes.
+01-14 01:09:13.691     0     0 E nq-nci 6-0028: nfc_read : reading 3 bytes.
+01-14 01:09:13.695  3122  3561 I chatty  : uid=1027(nfc) com.android.nfc expire 2 lines
+01-14 01:09:13.696     0     0 E nq-nci 6-0028: nfc_read : reading 2 bytes.
+01-14 01:09:13.702     0     0 E nq-nci 6-0028: nfc_read : reading 3 bytes.
+01-14 01:09:13.710     0     0 E nq-nci 6-0028: nfc_read : reading 1 bytes.
+01-14 01:09:13.713     0     0 E nq-nci 6-0028: nfc_read : reading 3 bytes.
+01-14 01:09:14.170  3122  3610 I chatty  : uid=1027(nfc) com.android.nfc expire 2 lines
+01-14 01:09:14.501  3122  3631 I chatty  : uid=1027(nfc) com.android.nfc expire 2 lines
+01-14 01:09:21.936  3122  3122 I chatty  : uid=1027(nfc) com.android.nfc expire 7 lines
+01-14 01:09:22.033  3122  3344 I chatty  : uid=1027(nfc) AsyncTask #1 expire 18 lines
+01-14 01:09:22.034   766   766 I chatty  : uid=1027(nfc) /vendor/bin/hw/android.hardware.nfc@1.2-service expire 3 lines
+01-14 01:09:22.035   766  3357 I chatty  : uid=1027(nfc) /vendor/bin/hw/android.hardware.nfc@1.2-service expire 12 lines
+01-14 01:09:22.047     0     0 E nq-nci 6-0028: nfc_write: failed to write -107
+01-14 01:09:22.052   766  3359 I chatty  : uid=1027(nfc) /vendor/bin/hw/android.hardware.nfc@1.2-service expire 3 lines
+01-14 01:09:22.067   766  3355 I chatty  : uid=1027(nfc) /vendor/bin/hw/android.hardware.nfc@1.2-service expire 5 lines
+01-14 01:09:22.069  3122  3334 I chatty  : uid=1027(nfc) AsyncTask #1 expire 18 lines
+01-14 01:09:22.077     0     0 E nq-nci 6-0028: nfc_read : reading 1 bytes.
+01-14 01:09:22.080     0     0 E nq-nci 6-0028: nfc_read : reading 3 bytes.
+01-14 01:09:45.337  3122  3344 I chatty  : uid=1027(nfc) AsyncTask #1 expire 22 lines
+01-14 01:09:45.341  3122  3334 I chatty  : uid=1027(nfc) AsyncTask #1 expire 2 lines
+01-14 01:09:45.347  3122  3344 I chatty  : uid=1027(nfc) AsyncTask #1 expire 5 lines
+01-14 01:09:45.350  3122  3334 I chatty  : uid=1027(nfc) AsyncTask #1 expire 2 lines
+01-14 01:09:45.351  3122  3344 I chatty  : uid=1027(nfc) AsyncTask #1 expire 7 lines
+01-14 01:09:45.355  3122  3334 I chatty  : uid=1027(nfc) AsyncTask #1 expire 2 lines
+01-14 01:09:45.355  3122  3344 I chatty  : uid=1027(nfc) AsyncTask #1 expire 17 lines
+01-14 01:09:45.356  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(463)] nfa_ee_add_aid_route_to_ecb - No AID entries available
+01-14 01:09:45.356  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(304)] nfa_ee_total_lmrt_size size:25
+01-14 01:09:45.356  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2606)] ee_cfg_sts:0x11 lmrt_size:25
+01-14 01:09:45.356  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2807)] nfa_ee_lmrt_to_nfcc --add the routing for NFCEEs!!
+01-14 01:09:45.356  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2560)] nfa_ee_route_add_one_ecb_by_route_order - max_len:720, cur_offset:0, more:1, num_tlv:0,rout_
+type:- 2
+01-14 01:09:45.356  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2591)] nfa_ee_route_add_one_ecb_by_route_order -  Route type - NA:- 2
+01-14 01:09:45.356  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(304)] nfa_ee_total_lmrt_size size:25
+01-14 01:09:45.356  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2606)] ee_cfg_sts:0x11 lmrt_size:25
+01-14 01:09:45.356  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2815)] nfa_ee_lmrt_to_nfcc --add the routing for DH!!
+01-14 01:09:45.356  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2560)] nfa_ee_route_add_one_ecb_by_route_order - max_len:720, cur_offset:0, more:1, num_tlv:0,rout_
+type:- 2
+01-14 01:09:45.356  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2591)] nfa_ee_route_add_one_ecb_by_route_order -  Route type - NA:- 2
+01-14 01:09:45.357  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(304)] nfa_ee_total_lmrt_size size:25
+01-14 01:09:45.357  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2606)] ee_cfg_sts:0x11 lmrt_size:25
+01-14 01:09:45.357  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2807)] nfa_ee_lmrt_to_nfcc --add the routing for NFCEEs!!
+01-14 01:09:45.357  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2560)] nfa_ee_route_add_one_ecb_by_route_order - max_len:720, cur_offset:0, more:1, num_tlv:0,rout_
+type:- 3
+01-14 01:09:45.357  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(516)] nfa_ee_add_sys_code_route_to_ecb - No SC entries available
+01-14 01:09:45.357  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(304)] nfa_ee_total_lmrt_size size:25
+01-14 01:09:45.357  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2606)] ee_cfg_sts:0x11 lmrt_size:25
+01-14 01:09:45.357  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2815)] nfa_ee_lmrt_to_nfcc --add the routing for DH!!
+01-14 01:09:45.357  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2560)] nfa_ee_route_add_one_ecb_by_route_order - max_len:720, cur_offset:0, more:1, num_tlv:0,rout_
+type:- 3
+01-14 01:09:45.357  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(516)] nfa_ee_add_sys_code_route_to_ecb - No SC entries available
+01-14 01:09:45.357  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(304)] nfa_ee_total_lmrt_size size:25
+01-14 01:09:45.357  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2606)] ee_cfg_sts:0x11 lmrt_size:25
+01-14 01:09:45.357  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2807)] nfa_ee_lmrt_to_nfcc --add the routing for NFCEEs!!
+01-14 01:09:45.357  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2560)] nfa_ee_route_add_one_ecb_by_route_order - max_len:720, cur_offset:0, more:1, num_tlv:0,rout_
+type:- 4
+01-14 01:09:45.357  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(304)] nfa_ee_total_lmrt_size size:25
+01-14 01:09:45.357  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2606)] ee_cfg_sts:0x11 lmrt_size:25
+01-14 01:09:45.357  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2815)] nfa_ee_lmrt_to_nfcc --add the routing for DH!!
+01-14 01:09:45.357  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2560)] nfa_ee_route_add_one_ecb_by_route_order - max_len:720, cur_offset:0, more:1, num_tlv:0,rout_
+type:- 4
+01-14 01:09:45.357  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(388)] nfa_ee_add_proto_route_to_ecb - NFC DEP added for DH!!!
+01-14 01:09:45.357  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(304)] nfa_ee_total_lmrt_size size:25
+01-14 01:09:45.357  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2606)] ee_cfg_sts:0x11 lmrt_size:25
+01-14 01:09:45.357  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2807)] nfa_ee_lmrt_to_nfcc --add the routing for NFCEEs!!
+01-14 01:09:45.357  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2560)] nfa_ee_route_add_one_ecb_by_route_order - max_len:720, cur_offset:15, more:1, num_tlv:3,rout
+_type:- 5
+01-14 01:09:45.357  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(304)] nfa_ee_total_lmrt_size size:25
+01-14 01:09:45.358  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2606)] ee_cfg_sts:0x11 lmrt_size:25
+01-14 01:09:45.358  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2815)] nfa_ee_lmrt_to_nfcc --add the routing for DH!!
+01-14 01:09:45.358  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2560)] nfa_ee_route_add_one_ecb_by_route_order - max_len:720, cur_offset:15, more:0, num_tlv:3,rout
+_type:- 5
+01-14 01:09:45.358  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(304)] nfa_ee_total_lmrt_size size:25
+01-14 01:09:45.358  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2606)] ee_cfg_sts:0x11 lmrt_size:25
+01-14 01:09:45.358  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2617)] nfa_ee_route_add_one_ecb_by_route_order : set routing num_tlv:5 tlv_size:25
+01-14 01:09:45.358  3122  3344 I libnfc_nci: [INFO:NfcAdaptation.cc(751)] NfcAdaptation::HalWrite
+01-14 01:09:45.358   766   766 D NxpExtns: find found MIFARE_READER_ENABLE=(0x1)
+01-14 01:09:45.358   766   766 D NfccPowerTracker: NfccPowerTracker::ProcessCmd: Enter,Recieved len :30
+01-14 01:09:45.358   766  3357 D NxpTml  : PN54X - Write requested.....
+01-14 01:09:45.359   766  3357 D NxpTml  : PN54X - Invoking I2C Write.....
+01-14 01:09:45.359   766  3357 D NxpTml  : _i2c_write() errno : 5
+01-14 01:09:45.359   766  3357 D NxpTml  : PN54X - Error in I2C Write.....
+01-14 01:09:45.360   766  3357 D NxpTml  : PN54X - Posting Fresh Write message.....
+01-14 01:09:45.360   766  3357 D NxpTml  : PN54X - Tml Writer Thread Running................
+01-14 01:09:45.360   766  3359 D NxpHal  : write error status = 0x1ff
+01-14 01:09:45.360   766   766 D NxpHal  : write_unlocked failed - PN54X Maybe in Standby Mode - Retry
+01-14 01:09:45.370     0     0 E nq-nci 6-0028: nfc_write: failed to write -107
+01-14 01:09:45.371   766  3357 D NxpTml  : PN54X - Write requested.....
+01-14 01:09:45.371   766  3357 D NxpTml  : PN54X - Invoking I2C Write.....
+01-14 01:09:45.376   766  3355 D NxpTml  : PN54X - I2C Read successful.....
+01-14 01:09:45.376   766  3355 D NxpTml  : Delay Read if write thread is busy
+01-14 01:09:45.376   766  3357 D NxpNciX : len =  30 > 21011B000501030001030103000104010300010500030001000003000102
+01-14 01:09:45.376   766  3357 D NxpTml  : PN54X - I2C Write successful.....
+01-14 01:09:45.376   766  3357 D NxpTml  : PN54X - Posting Fresh Write message.....
+01-14 01:09:45.376   766  3357 D NxpTml  : PN54X - Tml Writer Thread Running................
+01-14 01:09:45.377   766  3359 D NxpHal  : write successful status = 0x0
+01-14 01:09:45.378  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2862)] nfa_ee_update_rout ee_cfg_sts:0x10 ee_cfged:0x10
+01-14 01:09:45.379   766  3355 D NxpNciR : len =   4 > 41010100
+01-14 01:09:45.379   766  3355 D NxpTml  : PN54X - Posting read message.....
+01-14 01:09:45.379   766  3359 D NxpHal  : read successful status = 0x0
+01-14 01:09:45.381  3122  3344 I libnfc_nci: [INFO:nfc_ncif.cc(399)] NFC received rsp gid:1
+01-14 01:09:45.381  3122  3344 I libnfc_nci: [INFO:nfa_dm_act.cc(268)] NFC_SET_ROUTING_REVT(0x500a)
+01-14 01:09:45.381  3122  3344 I libnfc_nci: [INFO:nfa_ee_main.cc(359)] nfa_ee_proc_evt: event=0x500a int_event:0x218
+01-14 01:09:45.381  3122  3344 I libnfc_nci: [INFO:nfa_ee_main.cc(641)] Event NCI_WAIT_RSP(0x218), State: INIT_DONE(1)
+01-14 01:09:45.381  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2248)] ee_wait_evt:0x30 wait_rsp:1
+01-14 01:09:45.381  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2221)] nfa_ee_report_update_evt ee_wait_evt:0x30 wait_rsp:0
+01-14 01:09:45.381   766  3355 D NxpTml  : PN54X - Read requested.....
+01-14 01:09:45.381  3122  3344 I libnfc_nci: [INFO:RoutingManager.cpp(834)] RoutingManager::nfaEeCallback: NFA_EE_UPDATED_EVT
+01-14 01:09:45.381   766  3355 D NxpTml  : PN54X - Invoking I2C Read.....
+01-14 01:09:45.381  3122  3334 I libnfc_nci: [INFO:NativeNfcManager.cpp(2103)] startRfDiscovery: is start=1
+01-14 01:09:45.381  3122  3334 I libnfc_nci: [INFO:NativeNfcTag.cpp(1801)] nativeNfcTag_acquireRfInterfaceMutexLock: try to acquire lock
+01-14 01:09:45.381  3122  3334 I libnfc_nci: [INFO:NativeNfcTag.cpp(1804)] nativeNfcTag_acquireRfInterfaceMutexLock: sRfInterfaceMutex lock
+01-14 01:09:45.381  3122  3334 I libnfc_nci: [INFO:nfa_dm_api.cc(691)] NFA_StartRfDiscovery
+01-14 01:09:45.381  3122  3344 I libnfc_nci: [INFO:nfa_sys_main.cc(77)] NFA got event 0x010E
+01-14 01:09:45.381  3122  3344 I libnfc_nci: [INFO:nfa_dm_main.cc(122)] event: NFA_DM_API_START_RF_DISCOVERY_EVT (0x0e)
+01-14 01:09:45.381  3122  3344 I libnfc_nci: [INFO:nfa_dm_act.cc(1230)] nfa_dm_act_start_rf_discovery
+01-14 01:09:45.381  3122  3344 I libnfc_nci: [INFO:nfa_dm_discover.cc(884)] nfa_dm_start_rf_discover
+01-14 01:09:45.382  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2484)] 1
+01-14 01:09:45.382  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2508)] 0x0, 0x0, 0x0, 0x0
+01-14 01:09:45.382  3122  3344 I libnfc_nci: [INFO:nfa_dm_discover.cc(1012)] nfa_dm_cb.disc_cb.entry[0].selected_disc_mask = 0x40000
+01-14 01:09:45.382  3122  3344 I libnfc_nci: [INFO:nfa_dm_discover.cc(1050)] dm_disc_mask = 0x40000
+01-14 01:09:45.383  3122  3344 I libnfc_nci: [INFO:nfa_dm_discover.cc(280)] tech_proto_mask = 0x00040000
+01-14 01:09:45.383  3122  3344 I libnfc_nci: [INFO:nfa_dm_main.cc(222)] nfa_dm_check_set_config
+01-14 01:09:45.383  3122  3344 I libnfc_nci: [INFO:nfa_dm_discover.cc(370)] nfa_dm_set_total_duration
+01-14 01:09:45.383  3122  3344 I libnfc_nci: [INFO:nfa_dm_main.cc(222)] nfa_dm_check_set_config
+01-14 01:09:45.383  3122  3344 I libnfc_nci: [INFO:nfc_main.cc(888)] NFC_DiscoveryStart
+01-14 01:09:45.383  3122  3344 I libnfc_nci: [INFO:NfcAdaptation.cc(792)] NfcAdaptation::HalPrediscover
+01-14 01:09:45.383  3122  3344 I libnfc_nci: [INFO:NfcAdaptation.cc(751)] NfcAdaptation::HalWrite
+01-14 01:09:45.384   766   766 D NxpExtns: find found MIFARE_READER_ENABLE=(0x1)
+01-14 01:09:45.384   766   766 D NxpHal  : > Polling Loop Started
+01-14 01:09:45.384   766   766 D NxpHal  : phNxpNciHal_discovery_cmd_ext
+01-14 01:09:45.384   766   766 D NfccPowerTracker: NfccPowerTracker::ProcessCmd: Enter,Recieved len :6
+01-14 01:09:45.384   766  3357 D NxpTml  : PN54X - Write requested.....
+01-14 01:09:45.384   766  3357 D NxpTml  : PN54X - Invoking I2C Write.....
+01-14 01:09:45.386   766  3357 D NxpNciX : len =   6 > 210303018001
+01-14 01:09:45.386   766  3357 D NxpTml  : PN54X - I2C Write successful.....
+01-14 01:09:45.386   766  3357 D NxpTml  : PN54X - Posting Fresh Write message.....
+01-14 01:09:45.386   766  3357 D NxpTml  : PN54X - Tml Writer Thread Running................
+01-14 01:09:45.386   766  3359 D NxpHal  : write successful status = 0x0
+01-14 01:09:45.386     0     0 E nq-nci 6-0028: nfc_read : reading 1 bytes.
+01-14 01:09:45.387   766  3355 D NxpTml  : PN54X - I2C Read successful.....
+01-14 01:09:45.387   766  3355 D NxpNciR : len =   4 > 41030100
+01-14 01:09:45.387   766  3355 D NxpTml  : PN54X - Posting read message.....
+01-14 01:09:45.387   766  3359 D NxpHal  : read successful status = 0x0
+01-14 01:09:45.387   766  3355 D NxpTml  : PN54X - Read requested.....
+01-14 01:09:45.387   766  3355 D NxpTml  : PN54X - Invoking I2C Read.....
+01-14 01:09:45.388  3122  3344 I libnfc_nci: [INFO:nfc_main.cc(908)] NFC_DiscoveryStart status: 0xe3
+01-14 01:09:45.388  3122  3344 I libnfc_nci: [INFO:nfc_ncif.cc(399)] NFC received rsp gid:1
+01-14 01:09:45.388  3122  3344 I libnfc_nci: [INFO:nfa_dm_discover.cc(3030)] returning TRUE
+01-14 01:09:45.388  3122  3344 I libnfc_nci: [INFO:nfa_dm_discover.cc(694)] event:0x4000
+01-14 01:09:45.388  3122  3344 I libnfc_nci: [INFO:nfa_dm_discover.cc(2518)] state: IDLE (0), event: DISCOVER_RSP(1) disc_flags: 0x31
+01-14 01:09:45.388  3122  3344 I libnfc_nci: [INFO:nfa_dm_discover.cc(1685)] old_state: IDLE (0), new_state: DISCOVERY (1) disc_flags: 0x11
+01-14 01:09:45.389  3122  3344 I libnfc_nci: [INFO:NativeNfcManager.cpp(276)] nfaConnectionCallback: event= 30
+01-14 01:09:45.389  3122  3344 I libnfc_nci: [INFO:NativeNfcManager.cpp(301)] nfaConnectionCallback: NFA_RF_DISCOVERY_STARTED_EVT: status = 0
+01-14 01:09:45.389  3122  3344 I libnfc_nci: [INFO:nfa_dm_discover.cc(2571)] new state: DISCOVERY (1), disc_flags: 0x1
+01-14 01:09:45.389  3122  3334 I libnfc_nci: [INFO:NativeNfcTag.cpp(1819)] nativeNfcTag_releaseRfInterfaceMutexLock: sRfInterfaceMutex unlock
+01-14 01:09:45.389  3122  3334 I libnfc_nci: [INFO:PowerSwitch.cpp(258)] PowerSwitch::setModeOn(activated=0x1) : mCurrActivity=0x1
+01-14 01:09:45.389  3122  3334 I libnfc_nci: [INFO:NativeNfcManager.cpp(1306)] nfcManager_enableDiscovery: exit
+01-14 01:09:45.392     0     0 E nq-nci 6-0028: nfc_read : reading 3 bytes.
+01-14 01:09:45.396     0     0 E nq-nci 6-0028: nfc_read : reading 1 bytes.
+01-14 01:09:45.398     0     0 E nq-nci 6-0028: nfc_read : reading 3 bytes.
+01-14 01:09:46.876  3122  3122 D NfcService: MSG_APPLY_SCREEN_STATE 8
+01-14 01:09:46.876  3122  3122 I libnfc_nci: [INFO:NativeNfcManager.cpp(1231)] nfcManager_enableDiscovery: enter; tech_mask = ef
+01-14 01:09:46.876  3122  3122 I libnfc_nci: [INFO:PowerSwitch.cpp(154)] PowerSwitch::setLevel: level=PS-FULL (1)
+01-14 01:09:46.876  3122  3122 I libnfc_nci: [INFO:NativeNfcManager.cpp(2103)] startRfDiscovery: is start=0
+01-14 01:09:46.876  3122  3122 I libnfc_nci: [INFO:NativeNfcTag.cpp(1801)] nativeNfcTag_acquireRfInterfaceMutexLock: try to acquire lock
+01-14 01:09:46.876  3122  3122 I libnfc_nci: [INFO:NativeNfcTag.cpp(1804)] nativeNfcTag_acquireRfInterfaceMutexLock: sRfInterfaceMutex lock
+01-14 01:09:46.876  3122  3122 I libnfc_nci: [INFO:nfa_dm_api.cc(721)] NFA_StopRfDiscovery
+01-14 01:09:46.877  3122  3344 I libnfc_nci: [INFO:nfa_sys_main.cc(77)] NFA got event 0x010F
+01-14 01:09:46.877  3122  3344 I libnfc_nci: [INFO:nfa_dm_main.cc(122)] event: NFA_DM_API_STOP_RF_DISCOVERY_EVT (0x0f)
+01-14 01:09:46.877  3122  3344 I libnfc_nci: [INFO:nfa_dm_act.cc(1259)] nfa_dm_act_stop_rf_discovery
+01-14 01:09:46.877  3122  3344 I libnfc_nci: [INFO:nfa_dm_discover.cc(2752)] deactivate_type:0x0
+01-14 01:09:46.877  3122  3344 I libnfc_nci: [INFO:nfa_dm_discover.cc(2518)] state: DISCOVERY (1), event: DEACTIVATE_CMD(6) disc_flags: 0x2
+01-14 01:09:46.877  3122  3344 I libnfc_nci: [INFO:nfc_main.cc(1127)] NFC_Deactivate 4 (IDLE) deactivate_type:0
+01-14 01:09:46.877  3122  3344 I libnfc_nci: [INFO:NfcAdaptation.cc(751)] NfcAdaptation::HalWrite
+01-14 01:09:46.878   766   766 D NxpExtns: find found MIFARE_READER_ENABLE=(0x1)
+01-14 01:09:46.878   766   766 D NfccPowerTracker: NfccPowerTracker::ProcessCmd: Enter,Recieved len :4
+01-14 01:09:46.878   766  3357 D NxpTml  : PN54X - Write requested.....
+01-14 01:09:46.878   766  3357 D NxpTml  : PN54X - Invoking I2C Write.....
+01-14 01:09:46.890     0     0 E nq-nci 6-0028: nfc_write: failed to write -107
+01-14 01:09:46.894   766  3357 D NxpTml  : _i2c_write() errno : 5
+01-14 01:09:46.894   766  3357 D NxpTml  : PN54X - Error in I2C Write.....
+01-14 01:09:46.894   766  3357 D NxpTml  : PN54X - Posting Fresh Write message.....
+01-14 01:09:46.894   766  3357 D NxpTml  : PN54X - Tml Writer Thread Running................
+01-14 01:09:46.894   766  3359 D NxpHal  : write error status = 0x1ff
+01-14 01:09:46.895   766   766 D NxpHal  : write_unlocked failed - PN54X Maybe in Standby Mode - Retry
+01-14 01:09:46.906   766  3357 D NxpTml  : PN54X - Write requested.....
+01-14 01:09:46.906   766  3357 D NxpTml  : PN54X - Invoking I2C Write.....
+01-14 01:09:46.908   766  3357 D NxpNciX : len =   4 > 21060100
+01-14 01:09:46.908   766  3357 D NxpTml  : PN54X - I2C Write successful.....
+01-14 01:09:46.908   766  3357 D NxpTml  : PN54X - Posting Fresh Write message.....
+01-14 01:09:46.908   766  3359 D NxpHal  : write successful status = 0x0
+01-14 01:09:46.908   766  3357 D NxpTml  : PN54X - Tml Writer Thread Running................
+01-14 01:09:46.909  3122  3344 I libnfc_nci: [INFO:nfa_dm_discover.cc(2571)] new state: DISCOVERY (1), disc_flags: 0x22
+01-14 01:09:46.909  3122  3344 I libnfc_nci: [INFO:nfa_sys_ptim.cc(156)] nfa_sys_ptim_stop_timer 0x76fbfd04f8
+01-14 01:09:46.909  3122  3344 I libnfc_nci: [INFO:nfa_sys_ptim.cc(163)] ptim timer stop
+01-14 01:09:46.909  3122  3344 I libnfc_nci: [INFO:nfa_rw_act.cc(192)] Stopped presence check timer (if started)
+01-14 01:09:46.909   766  3355 D NxpTml  : PN54X - I2C Read successful.....
+01-14 01:09:46.909   766  3355 D NxpNciR : len =   4 > 41060100
+01-14 01:09:46.909   766  3355 D NxpTml  : PN54X - Posting read message.....
+01-14 01:09:46.909   766  3359 D NxpHal  : read successful status = 0x0
+01-14 01:09:46.910  3122  3344 I libnfc_nci: [INFO:nfc_ncif.cc(399)] NFC received rsp gid:1
+01-14 01:09:46.910  3122  3344 I libnfc_nci: [INFO:nfa_dm_discover.cc(2926)] P2P_Prio_Logic
+01-14 01:09:46.910  3122  3344 I libnfc_nci: [INFO:nfa_dm_discover.cc(2934)] nfa_dm_p2p_prio_logic event_type = 0x1
+01-14 01:09:46.910  3122  3344 I libnfc_nci: [INFO:nfa_dm_discover.cc(3030)] returning TRUE
+01-14 01:09:46.910  3122  3344 I libnfc_nci: [INFO:nfc_main.cc(326)] nfc_set_state 4 (IDLE)->4 (IDLE)
+01-14 01:09:46.910  3122  3344 I libnfc_nci: [INFO:nfa_dm_discover.cc(1662)] nfa_dm_disc_data_cback
+01-14 01:09:46.910  3122  3344 I libnfc_nci: [INFO:nfa_dm_discover.cc(694)] event:0x4005
+01-14 01:09:46.910  3122  3344 I libnfc_nci: [INFO:nfa_dm_discover.cc(2518)] state: DISCOVERY (1), event: DEACTIVATE_RSP(7) disc_flags: 0x22
+01-14 01:09:46.910  3122  3344 I libnfc_nci: [INFO:nfa_dm_discover.cc(1685)] old_state: DISCOVERY (1), new_state: IDLE (0) disc_flags: 0x2
+01-14 01:09:46.910  3122  3344 I libnfc_nci: [INFO:NativeNfcManager.cpp(276)] nfaConnectionCallback: event= 31
+01-14 01:09:46.910  3122  3344 I libnfc_nci: [INFO:NativeNfcManager.cpp(311)] nfaConnectionCallback: NFA_RF_DISCOVERY_STOPPED_EVT: status = 0
+01-14 01:09:46.910  3122  3344 I libnfc_nci: [INFO:nfa_dm_discover.cc(884)] nfa_dm_start_rf_discover
+01-14 01:09:46.910  3122  3344 I libnfc_nci: [INFO:nfa_dm_discover.cc(2571)] new state: IDLE (0), disc_flags: 0x0
+01-14 01:09:46.910   766  3355 D NxpTml  : PN54X - Read requested.....
+01-14 01:09:46.910   766  3355 D NxpTml  : PN54X - Invoking I2C Read.....
+01-14 01:09:46.912  3122  3122 I libnfc_nci: [INFO:NativeNfcTag.cpp(1819)] nativeNfcTag_releaseRfInterfaceMutexLock: sRfInterfaceMutex unlock
+01-14 01:09:46.913  3122  3122 I libnfc_nci: [INFO:NativeNfcTag.cpp(1801)] nativeNfcTag_acquireRfInterfaceMutexLock: try to acquire lock
+01-14 01:09:46.913  3122  3122 I libnfc_nci: [INFO:NativeNfcTag.cpp(1804)] nativeNfcTag_acquireRfInterfaceMutexLock: sRfInterfaceMutex lock
+01-14 01:09:46.913  3122  3122 I libnfc_nci: [INFO:NativeNfcManager.cpp(2233)] stopPolling_rfDiscoveryDisabled: disable polling
+01-14 01:09:46.913  3122  3122 I libnfc_nci: [INFO:nfa_dm_api.cc(477)] NFA_DisablePolling
+01-14 01:09:46.914  3122  3344 I libnfc_nci: [INFO:nfa_sys_main.cc(77)] NFA got event 0x0107
+01-14 01:09:46.914  3122  3344 I libnfc_nci: [INFO:nfa_dm_main.cc(122)] event: NFA_DM_API_DISABLE_POLLING_EVT (0x07)
+01-14 01:09:46.914  3122  3344 I libnfc_nci: [INFO:nfa_dm_act.cc(1042)] nfa_dm_act_disable_polling
+01-14 01:09:46.914  3122  3344 I libnfc_nci: [INFO:NativeNfcManager.cpp(276)] nfaConnectionCallback: event= 1
+01-14 01:09:46.915  3122  3344 I libnfc_nci: [INFO:NativeNfcManager.cpp(291)] nfaConnectionCallback: NFA_POLL_DISABLED_EVT: status = 3
+01-14 01:09:46.916  3122  3122 I libnfc_nci: [INFO:NativeNfcTag.cpp(1819)] nativeNfcTag_releaseRfInterfaceMutexLock: sRfInterfaceMutex unlock
+01-14 01:09:46.916  3122  3122 I libnfc_nci: [INFO:NativeNfcTag.cpp(1801)] nativeNfcTag_acquireRfInterfaceMutexLock: try to acquire lock
+01-14 01:09:46.916  3122  3122 I libnfc_nci: [INFO:NativeNfcTag.cpp(1804)] nativeNfcTag_acquireRfInterfaceMutexLock: sRfInterfaceMutex lock
+01-14 01:09:46.916  3122  3122 I libnfc_nci: [INFO:NativeNfcManager.cpp(2211)] startPolling_rfDiscoveryDisabled: enable polling
+01-14 01:09:46.916  3122  3122 I libnfc_nci: [INFO:nfa_dm_api.cc(443)] 0xEF
+01-14 01:09:46.916  3122  3122 I libnfc_nci: [INFO:NativeNfcManager.cpp(2215)] startPolling_rfDiscoveryDisabled: wait for enable event
+01-14 01:09:46.917  3122  3344 I libnfc_nci: [INFO:nfa_sys_main.cc(77)] NFA got event 0x0106
+01-14 01:09:46.917  3122  3344 I libnfc_nci: [INFO:nfa_dm_main.cc(122)] event: NFA_DM_API_ENABLE_POLLING_EVT (0x06)
+01-14 01:09:46.918  3122  3344 I libnfc_nci: [INFO:nfa_dm_act.cc(977)] nfa_dm_act_enable_polling
+01-14 01:09:46.918  3122  3344 I libnfc_nci: [INFO:nfa_dm_act.cc(908)] nfa_dm_start_polling
+01-14 01:09:46.918  3122  3344 I libnfc_nci: [INFO:nfa_dm_discover.cc(2591)] disc_mask=0x7d7f
+01-14 01:09:46.918  3122  3344 I libnfc_nci: [INFO:NativeNfcManager.cpp(276)] nfaConnectionCallback: event= 0
+01-14 01:09:46.918  3122  3344 I libnfc_nci: [INFO:NativeNfcManager.cpp(282)] nfaConnectionCallback: NFA_POLL_ENABLED_EVT: status = 0
+01-14 01:09:46.919     0     0 E nq-nci 6-0028: nfc_read : reading 1 bytes.
+01-14 01:09:46.919  3122  3122 I libnfc_nci: [INFO:NativeNfcTag.cpp(1819)] nativeNfcTag_releaseRfInterfaceMutexLock: sRfInterfaceMutex unlock
+01-14 01:09:46.919  3122  3122 I libnfc_nci: [INFO:NativeNfcManager.cpp(1253)] nfcManager_enableDiscovery: Enable p2pListening
+01-14 01:09:46.919  3122  3122 I libnfc_nci: [INFO:PeerToPeer.cpp(1119)] PeerToPeer::enableP2pListening: enter isEnable: 1  mIsP2pListening: 0
+01-14 01:09:46.919  3122  3122 I libnfc_nci: [INFO:nfa_dm_api.cc(658)] tech_mask:0xC5
+01-14 01:09:46.919  3122  3344 I libnfc_nci: [INFO:nfa_sys_main.cc(77)] NFA got event 0x010D
+01-14 01:09:46.919  3122  3344 I libnfc_nci: [INFO:nfa_dm_main.cc(122)] event: NFA_DM_API_SET_P2P_LISTEN_TECH_EVT (0x0d)
+01-14 01:09:46.919  3122  3344 I libnfc_nci: [INFO:nfa_dm_act.cc(1208)] tech_mask = 197
+01-14 01:09:46.919  3122  3344 I libnfc_nci: [INFO:nfa_p2p_main.cc(695)] tech_mask = 0xc5
+01-14 01:09:46.920  3122  3344 I libnfc_nci: [INFO:nfa_p2p_main.cc(587)] sys_id = 3, update_wks = 0
+01-14 01:09:46.920  3122  3344 I libnfc_nci: [INFO:nfa_dm_discover.cc(2591)] disc_mask=0xc480000
+01-14 01:09:46.920  3122  3344 I libnfc_nci: [INFO:NativeNfcManager.cpp(276)] nfaConnectionCallback: event= 33
+01-14 01:09:46.920  3122  3344 I libnfc_nci: [INFO:NativeNfcManager.cpp(622)] nfaConnectionCallback: NFA_SET_P2P_LISTEN_TECH_EVT
+01-14 01:09:46.921  3122  3122 I libnfc_nci: [INFO:PeerToPeer.cpp(1143)] PeerToPeer::enableP2pListening: exit; mIsP2pListening: 1
+01-14 01:09:46.921  3122  3122 I libnfc_nci: [INFO:nfa_dm_api.cc(621)] NFA_ResumeP2p
+01-14 01:09:46.921     0     0 E nq-nci 6-0028: nfc_read : reading 3 bytes.
+01-14 01:09:46.921  3122  3122 I libnfc_nci: [INFO:nfa_ee_api.cc(434)] handle:<0x0>protocol_mask:<0x4>/<0x0>/<0x0><0x0><0x0><0x0>
+01-14 01:09:46.921  3122  3122 I libnfc_nci: [INFO:nfa_ee_main.cc(403)] nfa_ee_find_ecb
+01-14 01:09:46.923  3122  3344 I libnfc_nci: [INFO:nfa_sys_main.cc(77)] NFA got event 0x010B
+01-14 01:09:46.923  3122  3344 I libnfc_nci: [INFO:nfa_dm_main.cc(122)] event: NFA_DM_API_RESUME_P2P_EVT (0x0b)
+01-14 01:09:46.923  3122  3344 I libnfc_nci: [INFO:nfa_dm_act.cc(1139)] nfa_dm_act_resume_p2p
+01-14 01:09:46.923  3122  3344 I libnfc_nci: [INFO:NativeNfcManager.cpp(276)] nfaConnectionCallback: event= 39
+01-14 01:09:46.923  3122  3344 I libnfc_nci: [INFO:NativeNfcManager.cpp(628)] nfaConnectionCallback: unknown event ????
+01-14 01:09:46.923  3122  3344 I libnfc_nci: [INFO:nfa_sys_main.cc(77)] NFA got event 0x0206
+01-14 01:09:46.923  3122  3344 I libnfc_nci: [INFO:nfa_ee_main.cc(641)] Event API_SET_PROTO_CFG(0x206), State: INIT_DONE(1)
+01-14 01:09:46.923  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(208)] nfa_ee_update_route_size nfcee_id:0x0 size_mask_proto:15 size_mask_tech:10
+01-14 01:09:46.923  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(304)] nfa_ee_total_lmrt_size size:25
+01-14 01:09:46.923  3122  3344 I libnfc_nci: [INFO:nfa_dm_main.cc(194)] flags:0x5
+01-14 01:09:46.923  3122  3344 I libnfc_nci: [INFO:nfa_sys_ptim.cc(128)] nfa_sys_ptim_start_timer 0x76fbfcf9f0
+01-14 01:09:46.923  3122  3344 I libnfc_nci: [INFO:nfa_sys_ptim.cc(133)] ptim timer start
+01-14 01:09:46.923  3122  3344 I libnfc_nci: [INFO:RoutingManager.cpp(735)] RoutingManager::nfaEeCallback: NFA_EE_SET_PROTO_CFG_EVT; status=0x0
+01-14 01:09:46.923  3122  3122 I libnfc_nci: [INFO:nfa_ee_api.cc(434)] handle:<0x0>protocol_mask:<0x8>/<0x0>/<0x0><0x8><0x0><0x0>
+01-14 01:09:46.923  3122  3122 I libnfc_nci: [INFO:nfa_ee_main.cc(403)] nfa_ee_find_ecb
+01-14 01:09:46.923  3122  3344 I libnfc_nci: [INFO:nfa_sys_main.cc(77)] NFA got event 0x0206
+01-14 01:09:46.931  3122  3344 I libnfc_nci: [INFO:nfa_ee_main.cc(641)] Event API_SET_PROTO_CFG(0x206), State: INIT_DONE(1)
+01-14 01:09:46.931  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(208)] nfa_ee_update_route_size nfcee_id:0x0 size_mask_proto:15 size_mask_tech:10
+01-14 01:09:46.931  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(304)] nfa_ee_total_lmrt_size size:25
+01-14 01:09:46.931  3122  3344 I libnfc_nci: [INFO:nfa_dm_main.cc(194)] flags:0x5
+01-14 01:09:46.931  3122  3344 I libnfc_nci: [INFO:nfa_sys_ptim.cc(128)] nfa_sys_ptim_start_timer 0x76fbfcf9f0
+01-14 01:09:46.931  3122  3344 I libnfc_nci: [INFO:RoutingManager.cpp(735)] RoutingManager::nfaEeCallback: NFA_EE_SET_PROTO_CFG_EVT; status=0x0
+01-14 01:09:46.931  3122  3122 I libnfc_nci: [INFO:nfa_ee_api.cc(303)] handle:<0x0>technology_mask:<0x1>/<0x0>/<0x0><0x1><0x1><0x1>
+01-14 01:09:46.931  3122  3122 I libnfc_nci: [INFO:nfa_ee_main.cc(403)] nfa_ee_find_ecb
+01-14 01:09:46.931  3122  3344 I libnfc_nci: [INFO:nfa_sys_main.cc(77)] NFA got event 0x0204
+01-14 01:09:46.931  3122  3344 I libnfc_nci: [INFO:nfa_ee_main.cc(641)] Event API_SET_TECH_CFG(0x204), State: INIT_DONE(1)
+01-14 01:09:46.931  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(208)] nfa_ee_update_route_size nfcee_id:0x0 size_mask_proto:15 size_mask_tech:10
+01-14 01:09:46.931  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(304)] nfa_ee_total_lmrt_size size:25
+01-14 01:09:46.931  3122  3344 I libnfc_nci: [INFO:nfa_dm_main.cc(194)] flags:0x5
+01-14 01:09:46.931  3122  3344 I libnfc_nci: [INFO:nfa_sys_ptim.cc(128)] nfa_sys_ptim_start_timer 0x76fbfcf9f0
+01-14 01:09:46.931  3122  3344 I libnfc_nci: [INFO:RoutingManager.cpp(721)] RoutingManager::nfaEeCallback: NFA_EE_SET_TECH_CFG_EVT; status=0x0
+01-14 01:09:46.931  3122  3122 I libnfc_nci: [INFO:nfa_ee_api.cc(303)] handle:<0x0>technology_mask:<0x4>/<0x0>/<0x0><0x4><0x4><0x4>
+01-14 01:09:46.932  3122  3122 I libnfc_nci: [INFO:nfa_ee_main.cc(403)] nfa_ee_find_ecb
+01-14 01:09:46.933  3122  3344 I libnfc_nci: [INFO:nfa_sys_main.cc(77)] NFA got event 0x0204
+01-14 01:09:46.933  3122  3344 I libnfc_nci: [INFO:nfa_ee_main.cc(641)] Event API_SET_TECH_CFG(0x204), State: INIT_DONE(1)
+01-14 01:09:46.933  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(208)] nfa_ee_update_route_size nfcee_id:0x0 size_mask_proto:15 size_mask_tech:10
+01-14 01:09:46.933  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(304)] nfa_ee_total_lmrt_size size:25
+01-14 01:09:46.933  3122  3344 I libnfc_nci: [INFO:nfa_dm_main.cc(194)] flags:0x5
+01-14 01:09:46.933  3122  3344 I libnfc_nci: [INFO:nfa_sys_ptim.cc(128)] nfa_sys_ptim_start_timer 0x76fbfcf9f0
+01-14 01:09:46.933  3122  3344 I libnfc_nci: [INFO:RoutingManager.cpp(721)] RoutingManager::nfaEeCallback: NFA_EE_SET_TECH_CFG_EVT; status=0x0
+01-14 01:09:46.933  3122  3122 I libnfc_nci: [INFO:RoutingManager.cpp(310)] RoutingManager::commitRouting
+01-14 01:09:46.935  3122  3122 I libnfc_nci: [INFO:nfa_ee_api.cc(803)] NFA_EeUpdateNow
+01-14 01:09:46.935  3122  3344 I libnfc_nci: [INFO:nfa_sys_main.cc(77)] NFA got event 0x020D
+01-14 01:09:46.935  3122  3344 I libnfc_nci: [INFO:nfa_ee_main.cc(641)] Event API_UPDATE_NOW(0x20d), State: INIT_DONE(1)
+01-14 01:09:46.935  3122  3344 I libnfc_nci: [INFO:nfa_sys_ptim.cc(156)] nfa_sys_ptim_stop_timer 0x76fbfcf9f0
+01-14 01:09:46.935  3122  3344 I libnfc_nci: [INFO:nfa_sys_ptim.cc(163)] ptim timer stop
+01-14 01:09:46.936  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2713)] nfa_ee_rout_timeout
+01-14 01:09:46.936  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2673)] ee_cfged: 0x90 ee_cfg_sts: 0x10
+01-14 01:09:46.936  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2684)] 0: ecb_flags  : 0x06, mask: 0x10
+01-14 01:09:46.936  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2840)] nfa_ee_update_rout ee_cfg_sts:0x10
+01-14 01:09:46.936  3122  3344 I libnfc_nci: [INFO:nfa_ee_main.cc(641)] Event CFG_TO_NFCC(0x21b), State: INIT_DONE(1)
+01-14 01:09:46.936  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2786)] last_active: 0x1
+01-14 01:09:46.936  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2807)] nfa_ee_lmrt_to_nfcc --add the routing for NFCEEs!!
+01-14 01:09:46.936  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2560)] nfa_ee_route_add_one_ecb_by_route_order - max_len:720, cur_offset:0, more:1, num_tlv:0,rout_
+type:- 1
+01-14 01:09:46.936  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(463)] nfa_ee_add_aid_route_to_ecb - No AID entries available
+01-14 01:09:46.936  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(304)] nfa_ee_total_lmrt_size size:25
+01-14 01:09:46.936  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2606)] ee_cfg_sts:0x10 lmrt_size:25
+01-14 01:09:46.936  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2815)] nfa_ee_lmrt_to_nfcc --add the routing for DH!!
+01-14 01:09:46.936  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2560)] nfa_ee_route_add_one_ecb_by_route_order - max_len:720, cur_offset:0, more:1, num_tlv:0,rout_
+type:- 1
+01-14 01:09:46.936  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(463)] nfa_ee_add_aid_route_to_ecb - No AID entries available
+01-14 01:09:46.936  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(304)] nfa_ee_total_lmrt_size size:25
+01-14 01:09:46.936  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2606)] ee_cfg_sts:0x11 lmrt_size:25
+01-14 01:09:46.936  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2807)] nfa_ee_lmrt_to_nfcc --add the routing for NFCEEs!!
+01-14 01:09:46.937  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2560)] nfa_ee_route_add_one_ecb_by_route_order - max_len:720, cur_offset:0, more:1, num_tlv:0,rout_
+type:- 2
+01-14 01:09:46.937  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2591)] nfa_ee_route_add_one_ecb_by_route_order -  Route type - NA:- 2
+01-14 01:09:46.937  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(304)] nfa_ee_total_lmrt_size size:25
+01-14 01:09:46.937  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2606)] ee_cfg_sts:0x11 lmrt_size:25
+01-14 01:09:46.937  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2815)] nfa_ee_lmrt_to_nfcc --add the routing for DH!!
+01-14 01:09:46.937  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2560)] nfa_ee_route_add_one_ecb_by_route_order - max_len:720, cur_offset:0, more:1, num_tlv:0,rout_
+type:- 2
+01-14 01:09:46.937  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2591)] nfa_ee_route_add_one_ecb_by_route_order -  Route type - NA:- 2
+01-14 01:09:46.938  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(304)] nfa_ee_total_lmrt_size size:25
+01-14 01:09:46.938  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2606)] ee_cfg_sts:0x11 lmrt_size:25
+01-14 01:09:46.938  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2807)] nfa_ee_lmrt_to_nfcc --add the routing for NFCEEs!!
+01-14 01:09:46.938  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2560)] nfa_ee_route_add_one_ecb_by_route_order - max_len:720, cur_offset:0, more:1, num_tlv:0,rout_
+type:- 3
+01-14 01:09:46.938  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(516)] nfa_ee_add_sys_code_route_to_ecb - No SC entries available
+01-14 01:09:46.938  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(304)] nfa_ee_total_lmrt_size size:25
+01-14 01:09:46.938  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2606)] ee_cfg_sts:0x11 lmrt_size:25
+01-14 01:09:46.938  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2815)] nfa_ee_lmrt_to_nfcc --add the routing for DH!!
+01-14 01:09:46.938  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2560)] nfa_ee_route_add_one_ecb_by_route_order - max_len:720, cur_offset:0, more:1, num_tlv:0,rout_
+type:- 3
+01-14 01:09:46.938  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(516)] nfa_ee_add_sys_code_route_to_ecb - No SC entries available
+01-14 01:09:46.938  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(304)] nfa_ee_total_lmrt_size size:25
+01-14 01:09:46.939  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2606)] ee_cfg_sts:0x11 lmrt_size:25
+01-14 01:09:46.939  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2807)] nfa_ee_lmrt_to_nfcc --add the routing for NFCEEs!!
+01-14 01:09:46.939  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2560)] nfa_ee_route_add_one_ecb_by_route_order - max_len:720, cur_offset:0, more:1, num_tlv:0,rout_
+type:- 4
+01-14 01:09:46.939  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(304)] nfa_ee_total_lmrt_size size:25
+01-14 01:09:46.939  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2606)] ee_cfg_sts:0x11 lmrt_size:25
+01-14 01:09:46.939  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2815)] nfa_ee_lmrt_to_nfcc --add the routing for DH!!
+01-14 01:09:46.939  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2560)] nfa_ee_route_add_one_ecb_by_route_order - max_len:720, cur_offset:0, more:1, num_tlv:0,rout_
+type:- 4
+01-14 01:09:46.939  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(388)] nfa_ee_add_proto_route_to_ecb - NFC DEP added for DH!!!
+01-14 01:09:46.939  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(304)] nfa_ee_total_lmrt_size size:25
+01-14 01:09:46.939  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2606)] ee_cfg_sts:0x11 lmrt_size:25
+01-14 01:09:46.939  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2807)] nfa_ee_lmrt_to_nfcc --add the routing for NFCEEs!!
+01-14 01:09:46.939  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2560)] nfa_ee_route_add_one_ecb_by_route_order - max_len:720, cur_offset:15, more:1, num_tlv:3,rout
+_type:- 5
+01-14 01:09:46.939  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(304)] nfa_ee_total_lmrt_size size:25
+01-14 01:09:46.939  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2606)] ee_cfg_sts:0x11 lmrt_size:25
+01-14 01:09:46.939  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2815)] nfa_ee_lmrt_to_nfcc --add the routing for DH!!
+01-14 01:09:46.939  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2560)] nfa_ee_route_add_one_ecb_by_route_order - max_len:720, cur_offset:15, more:0, num_tlv:3,rout
+_type:- 5
+01-14 01:09:46.939  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(304)] nfa_ee_total_lmrt_size size:25
+01-14 01:09:46.939  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2606)] ee_cfg_sts:0x11 lmrt_size:25
+01-14 01:09:46.940  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2617)] nfa_ee_route_add_one_ecb_by_route_order : set routing num_tlv:5 tlv_size:25
+01-14 01:09:46.940  3122  3344 I libnfc_nci: [INFO:NfcAdaptation.cc(751)] NfcAdaptation::HalWrite
+01-14 01:09:46.940   766   766 D NxpExtns: find found MIFARE_READER_ENABLE=(0x1)
+01-14 01:09:46.940   766   766 D NfccPowerTracker: NfccPowerTracker::ProcessCmd: Enter,Recieved len :30
+01-14 01:09:46.940   766  3357 D NxpTml  : PN54X - Write requested.....
+01-14 01:09:46.940   766  3357 D NxpTml  : PN54X - Invoking I2C Write.....
+01-14 01:09:46.942   766  3357 D NxpNciX : len =  30 > 21011B000501030001030103000104010300010500030001000003000102
+01-14 01:09:46.942   766  3357 D NxpTml  : PN54X - I2C Write successful.....
+01-14 01:09:46.942   766  3357 D NxpTml  : PN54X - Posting Fresh Write message.....
+01-14 01:09:46.942   766  3357 D NxpTml  : PN54X - Tml Writer Thread Running................
+01-14 01:09:46.943   766  3359 D NxpHal  : write successful status = 0x0
+01-14 01:09:46.943  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2862)] nfa_ee_update_rout ee_cfg_sts:0x10 ee_cfged:0x10
+01-14 01:09:46.945   766  3355 D NxpTml  : PN54X - I2C Read successful.....
+01-14 01:09:46.945   766  3355 D NxpNciR : len =   4 > 41010100
+01-14 01:09:46.945   766  3355 D NxpTml  : PN54X - Posting read message.....
+01-14 01:09:46.945   766  3359 D NxpHal  : read successful status = 0x0
+01-14 01:09:46.946  3122  3344 I libnfc_nci: [INFO:nfc_ncif.cc(399)] NFC received rsp gid:1
+01-14 01:09:46.946  3122  3344 I libnfc_nci: [INFO:nfa_dm_act.cc(268)] NFC_SET_ROUTING_REVT(0x500a)
+01-14 01:09:46.946   766  3355 D NxpTml  : PN54X - Read requested.....
+01-14 01:09:46.946  3122  3344 I libnfc_nci: [INFO:nfa_ee_main.cc(359)] nfa_ee_proc_evt: event=0x500a int_event:0x218
+01-14 01:09:46.946   766  3355 D NxpTml  : PN54X - Invoking I2C Read.....
+01-14 01:09:46.946  3122  3344 I libnfc_nci: [INFO:nfa_ee_main.cc(641)] Event NCI_WAIT_RSP(0x218), State: INIT_DONE(1)
+01-14 01:09:46.946  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2248)] ee_wait_evt:0x30 wait_rsp:1
+01-14 01:09:46.946  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2221)] nfa_ee_report_update_evt ee_wait_evt:0x30 wait_rsp:0
+01-14 01:09:46.946  3122  3344 I libnfc_nci: [INFO:RoutingManager.cpp(834)] RoutingManager::nfaEeCallback: NFA_EE_UPDATED_EVT
+01-14 01:09:46.948  3122  3122 I libnfc_nci: [INFO:NativeNfcManager.cpp(2103)] startRfDiscovery: is start=1
+01-14 01:09:46.948  3122  3122 I libnfc_nci: [INFO:NativeNfcTag.cpp(1801)] nativeNfcTag_acquireRfInterfaceMutexLock: try to acquire lock
+01-14 01:09:46.949  3122  3122 I libnfc_nci: [INFO:NativeNfcTag.cpp(1804)] nativeNfcTag_acquireRfInterfaceMutexLock: sRfInterfaceMutex lock
+01-14 01:09:46.949  3122  3122 I libnfc_nci: [INFO:nfa_dm_api.cc(691)] NFA_StartRfDiscovery
+01-14 01:09:46.949  3122  3344 I libnfc_nci: [INFO:nfa_sys_main.cc(77)] NFA got event 0x010E
+01-14 01:09:46.949  3122  3344 I libnfc_nci: [INFO:nfa_dm_main.cc(122)] event: NFA_DM_API_START_RF_DISCOVERY_EVT (0x0e)
+01-14 01:09:46.949  3122  3344 I libnfc_nci: [INFO:nfa_dm_act.cc(1230)] nfa_dm_act_start_rf_discovery
+01-14 01:09:46.949  3122  3344 I libnfc_nci: [INFO:nfa_dm_discover.cc(884)] nfa_dm_start_rf_discover
+01-14 01:09:46.949  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2484)] 1
+01-14 01:09:46.949  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2508)] 0x0, 0x0, 0x0, 0x0
+01-14 01:09:46.949  3122  3344 I libnfc_nci: [INFO:nfa_dm_discover.cc(1012)] nfa_dm_cb.disc_cb.entry[0].selected_disc_mask = 0x40000
+01-14 01:09:46.949  3122  3344 I libnfc_nci: [INFO:nfa_dm_discover.cc(1012)] nfa_dm_cb.disc_cb.entry[1].selected_disc_mask = 0x7d7f
+01-14 01:09:46.949  3122  3344 I libnfc_nci: [INFO:nfa_dm_discover.cc(1012)] nfa_dm_cb.disc_cb.entry[2].selected_disc_mask = 0xc480000
+01-14 01:09:46.949  3122  3344 I libnfc_nci: [INFO:nfa_p2p_main.cc(524)] nfa_p2p_set_config
+01-14 01:09:46.949  3122  3344 I libnfc_nci: [INFO:llcp_api.cc(231)] LLCP_GetDiscoveryConfig
+01-14 01:09:46.949  3122  3344 I libnfc_nci: [INFO:nfa_dm_main.cc(222)] nfa_dm_check_set_config
+01-14 01:09:46.949  3122  3344 I libnfc_nci: [INFO:NfcAdaptation.cc(751)] NfcAdaptation::HalWrite
+01-14 01:09:46.949   766   766 D NxpExtns: find found MIFARE_READER_ENABLE=(0x1)
+01-14 01:09:46.949   766   766 D NfccPowerTracker: NfccPowerTracker::ProcessCmd: Enter,Recieved len :26
+01-14 01:09:46.950   766  3357 D NxpTml  : PN54X - Write requested.....
+01-14 01:09:46.950   766  3357 D NxpTml  : PN54X - Invoking I2C Write.....
+01-14 01:09:46.952   766  3357 D NxpNciX : len =  26 > 20021701291446666D010112020207FF03020013040164070103
+01-14 01:09:46.952   766  3357 D NxpTml  : PN54X - I2C Write successful.....
+01-14 01:09:46.952   766  3357 D NxpTml  : PN54X - Posting Fresh Write message.....
+01-14 01:09:46.952   766  3357 D NxpTml  : PN54X - Tml Writer Thread Running................
+01-14 01:09:46.952   766  3359 D NxpHal  : write successful status = 0x0
+01-14 01:09:46.955  3122  3344 I libnfc_nci: [INFO:nfa_dm_main.cc(222)] nfa_dm_check_set_config
+01-14 01:09:46.955  3122  3344 I libnfc_nci: [INFO:nfa_dm_main.cc(222)] nfa_dm_check_set_config
+01-14 01:09:46.955  3122  3344 I libnfc_nci: [INFO:nfa_dm_discover.cc(1050)] dm_disc_mask = 0xc4c7d7f
+01-14 01:09:46.955  3122  3344 I libnfc_nci: [INFO:nfa_dm_discover.cc(280)] tech_proto_mask = 0x0C4C7D7F
+01-14 01:09:46.955  3122  3344 I libnfc_nci: [INFO:nfa_dm_main.cc(222)] nfa_dm_check_set_config
+01-14 01:09:46.955  3122  3344 I libnfc_nci: [INFO:nfa_dm_discover.cc(370)] nfa_dm_set_total_duration
+01-14 01:09:46.955  3122  3344 I libnfc_nci: [INFO:nfa_dm_main.cc(222)] nfa_dm_check_set_config
+01-14 01:09:46.955     0     0 E nq-nci 6-0028: nfc_read : reading 1 bytes.
+01-14 01:09:46.956  3122  3344 I libnfc_nci: [INFO:nfc_main.cc(888)] NFC_DiscoveryStart
+01-14 01:09:46.956  3122  3344 I libnfc_nci: [INFO:nfc_main.cc(908)] NFC_DiscoveryStart status: 0xe3
+01-14 01:09:46.957     0     0 E nq-nci 6-0028: nfc_read : reading 3 bytes.
+01-14 01:09:46.960   766  3355 D NxpTml  : PN54X - I2C Read successful.....
+01-14 01:09:46.960   766  3355 D NxpNciR : len =   5 > 4002020000
+01-14 01:09:46.960   766  3355 D NxpTml  : PN54X - Posting read message.....
+01-14 01:09:46.961   766  3359 D NxpHal  : read successful status = 0x0
+01-14 01:09:46.961   766  3359 D NxpHal  : phNxpNciHal_print_res_status: response status =STATUS_OK
+01-14 01:09:46.966  3122  3344 I libnfc_nci: [INFO:nfc_ncif.cc(399)] NFC received rsp gid:0
+01-14 01:09:46.966  3122  3344 I libnfc_nci: [INFO:nci_hrcv.cc(62)] nci_proc_core_rsp opcode:0x2
+01-14 01:09:46.966  3122  3344 I libnfc_nci: [INFO:nfa_dm_act.cc(268)] NFC_SET_CONFIG_REVT(0x5002)
+01-14 01:09:46.966   766  3355 D NxpTml  : PN54X - Read requested.....
+01-14 01:09:46.966  3122  3344 I libnfc_nci: [INFO:NfcAdaptation.cc(751)] NfcAdaptation::HalWrite
+01-14 01:09:46.966   766  3355 D NxpTml  : PN54X - Invoking I2C Read.....
+01-14 01:09:46.966   766   766 D NxpExtns: find found MIFARE_READER_ENABLE=(0x1)
+01-14 01:09:46.966   766   766 D NfccPowerTracker: NfccPowerTracker::ProcessCmd: Enter,Recieved len :29
+01-14 01:09:46.966   766  3357 D NxpTml  : PN54X - Write requested.....
+01-14 01:09:46.966   766  3357 D NxpTml  : PN54X - Invoking I2C Write.....
+01-14 01:09:46.968   766  3357 D NxpNciX : len =  29 > 20021A02611446666D010112020207FF03020013040164070103600108
+01-14 01:09:46.968   766  3357 D NxpTml  : PN54X - I2C Write successful.....
+01-14 01:09:46.968   766  3357 D NxpTml  : PN54X - Posting Fresh Write message.....
+01-14 01:09:46.969   766  3357 D NxpTml  : PN54X - Tml Writer Thread Running................
+01-14 01:09:46.969   766  3359 D NxpHal  : write successful status = 0x0
+01-14 01:09:46.970     0     0 E nq-nci 6-0028: nfc_read : reading 2 bytes.
+01-14 01:09:46.977     0     0 E nq-nci 6-0028: nfc_read : reading 3 bytes.
+01-14 01:09:46.980   766  3355 D NxpTml  : PN54X - I2C Read successful.....
+01-14 01:09:46.980   766  3355 D NxpNciR : len =   5 > 4002020000
+01-14 01:09:46.981   766  3355 D NxpTml  : PN54X - Posting read message.....
+01-14 01:09:46.981   766  3359 D NxpHal  : read successful status = 0x0
+01-14 01:09:46.981   766  3359 D NxpHal  : phNxpNciHal_print_res_status: response status =STATUS_OK
+01-14 01:09:46.982   766  3355 D NxpTml  : PN54X - Read requested.....
+01-14 01:09:46.982   766  3355 D NxpTml  : PN54X - Invoking I2C Read.....
+01-14 01:09:46.982  3122  3344 I libnfc_nci: [INFO:nfc_ncif.cc(399)] NFC received rsp gid:0
+01-14 01:09:46.982  3122  3344 I libnfc_nci: [INFO:nci_hrcv.cc(62)] nci_proc_core_rsp opcode:0x2
+01-14 01:09:46.982  3122  3344 I libnfc_nci: [INFO:nfa_dm_act.cc(268)] NFC_SET_CONFIG_REVT(0x5002)
+01-14 01:09:46.982  3122  3344 I libnfc_nci: [INFO:NfcAdaptation.cc(751)] NfcAdaptation::HalWrite
+01-14 01:09:46.982   766   766 D NxpExtns: find found MIFARE_READER_ENABLE=(0x1)
+01-14 01:09:46.982   766   766 D NfccPowerTracker: NfccPowerTracker::ProcessCmd: Enter,Recieved len :10
+01-14 01:09:46.982   766  3357 D NxpTml  : PN54X - Write requested.....
+01-14 01:09:46.982   766  3357 D NxpTml  : PN54X - Invoking I2C Write.....
+01-14 01:09:46.985   766  3357 D NxpNciX : len =  10 > 20020702320160500102
+01-14 01:09:46.985   766  3357 D NxpTml  : PN54X - I2C Write successful.....
+01-14 01:09:46.985   766  3357 D NxpTml  : PN54X - Posting Fresh Write message.....
+01-14 01:09:46.985   766  3357 D NxpTml  : PN54X - Tml Writer Thread Running................
+01-14 01:09:46.985   766  3359 D NxpHal  : write successful status = 0x0
+01-14 01:09:46.990   766  3355 D NxpTml  : PN54X - I2C Read successful.....
+01-14 01:09:46.990   766  3355 D NxpNciR : len =   5 > 4002020000
+01-14 01:09:46.990   766  3355 D NxpTml  : PN54X - Posting read message.....
+01-14 01:09:46.990   766  3359 D NxpHal  : read successful status = 0x0
+01-14 01:09:46.990   766  3359 D NxpHal  : phNxpNciHal_print_res_status: response status =STATUS_OK
+01-14 01:09:46.991     0     0 E nq-nci 6-0028: nfc_read : reading 2 bytes.
+01-14 01:09:46.991  3122  3344 I libnfc_nci: [INFO:nfc_ncif.cc(399)] NFC received rsp gid:0
+01-14 01:09:46.991  3122  3344 I libnfc_nci: [INFO:nci_hrcv.cc(62)] nci_proc_core_rsp opcode:0x2
+01-14 01:09:46.992  3122  3344 I libnfc_nci: [INFO:nfa_dm_act.cc(268)] NFC_SET_CONFIG_REVT(0x5002)
+01-14 01:09:46.992  3122  3344 I libnfc_nci: [INFO:NfcAdaptation.cc(792)] NfcAdaptation::HalPrediscover
+01-14 01:09:46.992   766  3355 D NxpTml  : PN54X - Read requested.....
+01-14 01:09:46.992   766  3355 D NxpTml  : PN54X - Invoking I2C Read.....
+01-14 01:09:46.992     0     0 E nq-nci 6-0028: nfc_read : reading 3 bytes.
+01-14 01:09:46.995  3122  3344 I libnfc_nci: [INFO:NfcAdaptation.cc(751)] NfcAdaptation::HalWrite
+01-14 01:09:46.995   766   766 D NxpExtns: find found MIFARE_READER_ENABLE=(0x1)
+01-14 01:09:46.995   766   766 D NxpHal  : > Polling Loop Started
+01-14 01:09:46.995   766   766 D NxpHal  : phNxpNciHal_discovery_cmd_ext
+01-14 01:09:46.995   766   766 D NfccPowerTracker: NfccPowerTracker::ProcessCmd: Enter,Recieved len :26
+01-14 01:09:46.997   766  3357 D NxpTml  : PN54X - Write requested.....
+01-14 01:09:46.997   766  3357 D NxpTml  : PN54X - Invoking I2C Write.....
+01-14 01:09:46.999   766  3357 D NxpNciX : len =  26 > 2103170B00010101020103010501800182018301850106017001
+01-14 01:09:46.999   766  3357 D NxpTml  : PN54X - I2C Write successful.....
+01-14 01:09:46.999   766  3357 D NxpTml  : PN54X - Posting Fresh Write message.....
+01-14 01:09:46.999   766  3357 D NxpTml  : PN54X - Tml Writer Thread Running................
+01-14 01:09:46.999   766  3359 D NxpHal  : write successful status = 0x0
+01-14 01:09:47.001     0     0 E nq-nci 6-0028: nfc_read : reading 2 bytes.
+01-14 01:09:47.001   766  3355 D NxpTml  : PN54X - I2C Read successful.....
+01-14 01:09:47.001   766  3355 D NxpNciR : len =   4 > 41030100
+01-14 01:09:47.001   766  3355 D NxpTml  : PN54X - Posting read message.....
+01-14 01:09:47.001   766  3359 D NxpHal  : read successful status = 0x0
+01-14 01:09:47.002  3122  3344 I libnfc_nci: [INFO:nfc_ncif.cc(399)] NFC received rsp gid:1
+01-14 01:09:47.002  3122  3344 I libnfc_nci: [INFO:nfa_dm_discover.cc(3030)] returning TRUE
+01-14 01:09:47.002  3122  3344 I libnfc_nci: [INFO:nfa_dm_discover.cc(694)] event:0x4000
+01-14 01:09:47.002  3122  3344 I libnfc_nci: [INFO:nfa_dm_discover.cc(2518)] state: IDLE (0), event: DISCOVER_RSP(1) disc_flags: 0x31
+01-14 01:09:47.002  3122  3344 I libnfc_nci: [INFO:nfa_dm_discover.cc(1685)] old_state: IDLE (0), new_state: DISCOVERY (1) disc_flags: 0x11
+01-14 01:09:47.002  3122  3344 I libnfc_nci: [INFO:nfa_dm_act.cc(1557)] event:0x00
+01-14 01:09:47.002  3122  3344 I libnfc_nci: [INFO:nfa_p2p_main.cc(104)] event:0x00
+01-14 01:09:47.002  3122  3344 I libnfc_nci: [INFO:NativeNfcManager.cpp(276)] nfaConnectionCallback: event= 30
+01-14 01:09:47.002  3122  3344 I libnfc_nci: [INFO:NativeNfcManager.cpp(301)] nfaConnectionCallback: NFA_RF_DISCOVERY_STARTED_EVT: status = 0
+01-14 01:09:47.002  3122  3344 I libnfc_nci: [INFO:nfa_dm_discover.cc(2571)] new state: DISCOVERY (1), disc_flags: 0x1
+01-14 01:09:47.002  3122  3122 I libnfc_nci: [INFO:NativeNfcTag.cpp(1819)] nativeNfcTag_releaseRfInterfaceMutexLock: sRfInterfaceMutex unlock
+01-14 01:09:47.003  3122  3122 I libnfc_nci: [INFO:PowerSwitch.cpp(258)] PowerSwitch::setModeOn(activated=0x1) : mCurrActivity=0x1
+01-14 01:09:47.003  3122  3122 I libnfc_nci: [INFO:NativeNfcManager.cpp(1306)] nfcManager_enableDiscovery: exit
+01-14 01:09:47.003  3122  3122 I libnfc_nci: [INFO:NativeNfcManager.cpp(1788)] nfcManager_doSetScreenState: state = 8 prevScreenState= 4, discovry_param = 1
+01-14 01:09:47.004     0     0 E nq-nci 6-0028: nfc_read : reading 3 bytes.
+01-14 01:09:47.005   766  3355 D NxpTml  : PN54X - Read requested.....
+01-14 01:09:47.005   766  3355 D NxpTml  : PN54X - Invoking I2C Read.....
+01-14 01:09:47.006  3122  3334 W com.android.nf: Long monitor contention with owner main (3122) at void com.android.nfc.dhimpl.NativeNfcManager.doEnableDiscovery(in
+t, boolean, boolean, boolean, boolean, boolean)(NativeNfcManager.java:-2) waiters=0 in java.lang.Void com.android.nfc.NfcService$ApplyRoutingTask.doInBackground(jav
+a.lang.Integer[]) for 123ms
+01-14 01:09:47.006  3122  3334 I dvm_lock_sample: [com.android.nfc,0,AsyncTask #1,123,NfcService.java,2590,java.lang.Void com.android.nfc.NfcService$ApplyRoutingTas
+k.doInBackground(java.lang.Integer[]),NativeNfcManager.java,-2,void com.android.nfc.dhimpl.NativeNfcManager.doEnableDiscovery(int, boolean, boolean, boolean, boolea
+n, boolean),24]
+01-14 01:09:47.008  3122  3334 D NfcService: Discovery configuration equal, not updating.
+01-14 01:09:47.011     0     0 E nq-nci 6-0028: nfc_read : reading 1 bytes.
+01-14 01:09:47.016     0     0 E nq-nci 6-0028: nfc_read : reading 3 bytes.
+01-14 01:10:47.188  1881  1933 I am_pss  : [3122,1027,com.android.nfc,11439104,9637888,0,56950784,0,0,9]
+01-14 01:10:47.912  3122  3122 D NfcService: MSG_APPLY_SCREEN_STATE 1
+01-14 01:10:47.913  3122  3122 I libnfc_nci: [INFO:NativeNfcManager.cpp(1788)] nfcManager_doSetScreenState: state = 1 prevScreenState= 8, discovry_param = 1
+01-14 01:10:47.917  3122  3334 I libnfc_nci: [INFO:NativeNfcManager.cpp(1322)] nfcManager_disableDiscovery: enter;
+01-14 01:10:47.917  3122  3334 I libnfc_nci: [INFO:NativeNfcManager.cpp(2103)] startRfDiscovery: is start=0
+01-14 01:10:47.917  3122  3334 I libnfc_nci: [INFO:NativeNfcTag.cpp(1801)] nativeNfcTag_acquireRfInterfaceMutexLock: try to acquire lock
+01-14 01:10:47.917  3122  3334 I libnfc_nci: [INFO:NativeNfcTag.cpp(1804)] nativeNfcTag_acquireRfInterfaceMutexLock: sRfInterfaceMutex lock
+01-14 01:10:47.917  3122  3334 I libnfc_nci: [INFO:nfa_dm_api.cc(721)] NFA_StopRfDiscovery
+01-14 01:10:47.917  3122  3344 I libnfc_nci: [INFO:nfa_sys_main.cc(77)] NFA got event 0x010F
+01-14 01:10:47.917  3122  3344 I libnfc_nci: [INFO:nfa_dm_main.cc(122)] event: NFA_DM_API_STOP_RF_DISCOVERY_EVT (0x0f)
+01-14 01:10:47.917  3122  3344 I libnfc_nci: [INFO:nfa_dm_act.cc(1259)] nfa_dm_act_stop_rf_discovery
+01-14 01:10:47.918  3122  3344 I libnfc_nci: [INFO:nfa_dm_discover.cc(2752)] deactivate_type:0x0
+01-14 01:10:47.918  3122  3344 I libnfc_nci: [INFO:nfa_dm_discover.cc(2518)] state: DISCOVERY (1), event: DEACTIVATE_CMD(6) disc_flags: 0x2
+01-14 01:10:47.918  3122  3344 I libnfc_nci: [INFO:nfc_main.cc(1127)] NFC_Deactivate 4 (IDLE) deactivate_type:0
+01-14 01:10:47.918  3122  3344 I libnfc_nci: [INFO:NfcAdaptation.cc(751)] NfcAdaptation::HalWrite
+01-14 01:10:47.919   766   766 D NxpExtns: find found MIFARE_READER_ENABLE=(0x1)
+01-14 01:10:47.919   766   766 D NfccPowerTracker: NfccPowerTracker::ProcessCmd: Enter,Recieved len :4
+01-14 01:10:47.919   766  3357 D NxpTml  : PN54X - Write requested.....
+01-14 01:10:47.919   766  3357 D NxpTml  : PN54X - Invoking I2C Write.....
+01-14 01:10:47.931     0     0 E nq-nci 6-0028: nfc_write: failed to write -107
+01-14 01:10:47.935   766  3357 D NxpTml  : _i2c_write() errno : 5
+01-14 01:10:47.937   766  3357 D NxpTml  : PN54X - Error in I2C Write.....
+01-14 01:10:47.937   766  3357 D NxpTml  : PN54X - Posting Fresh Write message.....
+01-14 01:10:47.937   766  3357 D NxpTml  : PN54X - Tml Writer Thread Running................
+01-14 01:10:47.938   766  3359 D NxpHal  : write error status = 0x1ff
+01-14 01:10:47.938   766   766 D NxpHal  : write_unlocked failed - PN54X Maybe in Standby Mode - Retry
+01-14 01:10:47.948   766  3357 D NxpTml  : PN54X - Write requested.....
+01-14 01:10:47.949   766  3357 D NxpTml  : PN54X - Invoking I2C Write.....
+01-14 01:10:47.952   766  3357 D NxpNciX : len =   4 > 21060100
+01-14 01:10:47.952   766  3357 D NxpTml  : PN54X - I2C Write successful.....
+01-14 01:10:47.952   766  3357 D NxpTml  : PN54X - Posting Fresh Write message.....
+01-14 01:10:47.952   766  3357 D NxpTml  : PN54X - Tml Writer Thread Running................
+01-14 01:10:47.952   766  3359 D NxpHal  : write successful status = 0x0
+01-14 01:10:47.965     0     0 E nq-nci 6-0028: nfc_read : reading 1 bytes.
+01-14 01:10:47.953  3122  3344 I libnfc_nci: [INFO:nfa_dm_discover.cc(2571)] new state: DISCOVERY (1), disc_flags: 0x22
+01-14 01:10:47.953  3122  3344 I libnfc_nci: [INFO:nfa_sys_ptim.cc(156)] nfa_sys_ptim_stop_timer 0x76fbfd04f8
+01-14 01:10:47.953  3122  3344 I libnfc_nci: [INFO:nfa_sys_ptim.cc(163)] ptim timer stop
+01-14 01:10:47.953  3122  3344 I libnfc_nci: [INFO:nfa_rw_act.cc(192)] Stopped presence check timer (if started)
+01-14 01:10:47.955   766  3355 D NxpTml  : PN54X - I2C Read successful.....
+01-14 01:10:47.955   766  3355 D NxpNciR : len =   4 > 41060100
+01-14 01:10:47.955   766  3355 D NxpTml  : PN54X - Posting read message.....
+01-14 01:10:47.955   766  3359 D NxpHal  : read successful status = 0x0
+01-14 01:10:47.956  3122  3344 I libnfc_nci: [INFO:nfc_ncif.cc(399)] NFC received rsp gid:1
+01-14 01:10:47.956  3122  3344 I libnfc_nci: [INFO:nfa_dm_discover.cc(2926)] P2P_Prio_Logic
+01-14 01:10:47.967     0     0 E nq-nci 6-0028: nfc_read : reading 3 bytes.
+01-14 01:10:47.956   766  3355 D NxpTml  : PN54X - Read requested.....
+01-14 01:10:47.956  3122  3344 I libnfc_nci: [INFO:nfa_dm_discover.cc(2934)] nfa_dm_p2p_prio_logic event_type = 0x1
+01-14 01:10:47.956   766  3355 D NxpTml  : PN54X - Invoking I2C Read.....
+01-14 01:10:47.956  3122  3344 I libnfc_nci: [INFO:nfa_dm_discover.cc(3030)] returning TRUE
+01-14 01:10:47.956  3122  3344 I libnfc_nci: [INFO:nfc_main.cc(326)] nfc_set_state 4 (IDLE)->4 (IDLE)
+01-14 01:10:47.956  3122  3344 I libnfc_nci: [INFO:nfa_dm_discover.cc(1662)] nfa_dm_disc_data_cback
+01-14 01:10:47.956  3122  3344 I libnfc_nci: [INFO:nfa_dm_discover.cc(694)] event:0x4005
+01-14 01:10:47.956  3122  3344 I libnfc_nci: [INFO:nfa_dm_discover.cc(2518)] state: DISCOVERY (1), event: DEACTIVATE_RSP(7) disc_flags: 0x22
+01-14 01:10:47.957  3122  3344 I libnfc_nci: [INFO:nfa_dm_discover.cc(1685)] old_state: DISCOVERY (1), new_state: IDLE (0) disc_flags: 0x2
+01-14 01:10:47.957  3122  3344 I libnfc_nci: [INFO:NativeNfcManager.cpp(276)] nfaConnectionCallback: event= 31
+01-14 01:10:47.957  3122  3344 I libnfc_nci: [INFO:NativeNfcManager.cpp(311)] nfaConnectionCallback: NFA_RF_DISCOVERY_STOPPED_EVT: status = 0
+01-14 01:10:47.957  3122  3344 I libnfc_nci: [INFO:nfa_dm_discover.cc(884)] nfa_dm_start_rf_discover
+01-14 01:10:47.957  3122  3344 I libnfc_nci: [INFO:nfa_dm_discover.cc(2571)] new state: IDLE (0), disc_flags: 0x0
+01-14 01:10:47.959  3122  3334 I libnfc_nci: [INFO:NativeNfcTag.cpp(1819)] nativeNfcTag_releaseRfInterfaceMutexLock: sRfInterfaceMutex unlock
+01-14 01:10:47.959  3122  3334 I libnfc_nci: [INFO:NativeNfcTag.cpp(1801)] nativeNfcTag_acquireRfInterfaceMutexLock: try to acquire lock
+01-14 01:10:47.959  3122  3334 I libnfc_nci: [INFO:NativeNfcTag.cpp(1804)] nativeNfcTag_acquireRfInterfaceMutexLock: sRfInterfaceMutex lock
+01-14 01:10:47.959  3122  3334 I libnfc_nci: [INFO:NativeNfcManager.cpp(2233)] stopPolling_rfDiscoveryDisabled: disable polling
+01-14 01:10:47.959  3122  3334 I libnfc_nci: [INFO:nfa_dm_api.cc(477)] NFA_DisablePolling
+01-14 01:10:47.959  3122  3344 I libnfc_nci: [INFO:nfa_sys_main.cc(77)] NFA got event 0x0107
+01-14 01:10:47.959  3122  3344 I libnfc_nci: [INFO:nfa_dm_main.cc(122)] event: NFA_DM_API_DISABLE_POLLING_EVT (0x07)
+01-14 01:10:47.959  3122  3344 I libnfc_nci: [INFO:nfa_dm_act.cc(1042)] nfa_dm_act_disable_polling
+01-14 01:10:47.959  3122  3344 I libnfc_nci: [INFO:nfa_dm_act.cc(1011)] nfa_dm_deactivate_polling
+01-14 01:10:47.959  3122  3344 I libnfc_nci: [INFO:nfa_dm_discover.cc(2698)] handle=0x1
+01-14 01:10:47.959  3122  3344 I libnfc_nci: [INFO:NativeNfcManager.cpp(276)] nfaConnectionCallback: event= 1
+01-14 01:10:47.959  3122  3344 I libnfc_nci: [INFO:NativeNfcManager.cpp(291)] nfaConnectionCallback: NFA_POLL_DISABLED_EVT: status = 0
+01-14 01:10:47.960  3122  3334 I libnfc_nci: [INFO:NativeNfcTag.cpp(1819)] nativeNfcTag_releaseRfInterfaceMutexLock: sRfInterfaceMutex unlock
+01-14 01:10:47.960  3122  3334 I libnfc_nci: [INFO:PeerToPeer.cpp(1119)] PeerToPeer::enableP2pListening: enter isEnable: 0  mIsP2pListening: 1
+01-14 01:10:47.960  3122  3334 I libnfc_nci: [INFO:nfa_dm_api.cc(658)] tech_mask:0x0
+01-14 01:10:47.960  3122  3344 I libnfc_nci: [INFO:nfa_sys_main.cc(77)] NFA got event 0x010D
+01-14 01:10:47.960  3122  3344 I libnfc_nci: [INFO:nfa_dm_main.cc(122)] event: NFA_DM_API_SET_P2P_LISTEN_TECH_EVT (0x0d)
+01-14 01:10:47.960  3122  3344 I libnfc_nci: [INFO:nfa_dm_act.cc(1208)] tech_mask = 0
+01-14 01:10:47.960  3122  3344 I libnfc_nci: [INFO:nfa_p2p_main.cc(695)] tech_mask = 0x0
+01-14 01:10:47.960  3122  3344 I libnfc_nci: [INFO:nfa_dm_discover.cc(2698)] handle=0x2
+01-14 01:10:47.960  3122  3344 I libnfc_nci: [INFO:nfa_p2p_main.cc(587)] sys_id = 3, update_wks = 0
+01-14 01:10:47.960  3122  3344 I libnfc_nci: [INFO:NativeNfcManager.cpp(276)] nfaConnectionCallback: event= 33
+01-14 01:10:47.960  3122  3344 I libnfc_nci: [INFO:NativeNfcManager.cpp(622)] nfaConnectionCallback: NFA_SET_P2P_LISTEN_TECH_EVT
+01-14 01:10:47.960  3122  3334 I libnfc_nci: [INFO:PeerToPeer.cpp(1143)] PeerToPeer::enableP2pListening: exit; mIsP2pListening: 0
+01-14 01:10:47.960  3122  3334 I libnfc_nci: [INFO:PowerSwitch.cpp(236)] PowerSwitch::setModeOff(deactivated=0x1) : mCurrActivity=0x0
+01-14 01:10:47.960  3122  3334 I libnfc_nci: [INFO:PowerSwitch.cpp(154)] PowerSwitch::setLevel: level=PS-LOW-POWER (2)
+01-14 01:10:47.960  3122  3334 I libnfc_nci: [INFO:PowerSwitch.cpp(201)] PowerSwitch::setLevel: actual power level=PS-FULL
+01-14 01:10:47.960  3122  3334 I libnfc_nci: [INFO:NativeNfcManager.cpp(1342)] nfcManager_disableDiscovery: exit
+01-14 01:11:28.805  3122  3122 D NfcService: MSG_APPLY_SCREEN_STATE 4
+01-14 01:11:28.805  3122  3122 I libnfc_nci: [INFO:NativeNfcManager.cpp(1788)] nfcManager_doSetScreenState: state = 4 prevScreenState= 1, discovry_param = 1
+01-14 01:11:28.818  3122  3334 I libnfc_nci: [INFO:NativeNfcManager.cpp(1231)] nfcManager_enableDiscovery: enter; tech_mask = 00
+01-14 01:11:28.818  3122  3334 I libnfc_nci: [INFO:PowerSwitch.cpp(154)] PowerSwitch::setLevel: level=PS-FULL (1)
+01-14 01:11:28.818  3122  3334 I libnfc_nci: [INFO:NativeNfcTag.cpp(1801)] nativeNfcTag_acquireRfInterfaceMutexLock: try to acquire lock
+01-14 01:11:28.818  3122  3334 I libnfc_nci: [INFO:NativeNfcTag.cpp(1804)] nativeNfcTag_acquireRfInterfaceMutexLock: sRfInterfaceMutex lock
+01-14 01:11:28.819  3122  3334 I libnfc_nci: [INFO:NativeNfcManager.cpp(2233)] stopPolling_rfDiscoveryDisabled: disable polling
+01-14 01:11:28.819  3122  3334 I libnfc_nci: [INFO:nfa_dm_api.cc(477)] NFA_DisablePolling
+01-14 01:11:28.819  3122  3344 I libnfc_nci: [INFO:nfa_sys_main.cc(77)] NFA got event 0x0107
+01-14 01:11:28.819  3122  3344 I libnfc_nci: [INFO:nfa_dm_main.cc(122)] event: NFA_DM_API_DISABLE_POLLING_EVT (0x07)
+01-14 01:11:28.819  3122  3344 I libnfc_nci: [INFO:nfa_dm_act.cc(1042)] nfa_dm_act_disable_polling
+01-14 01:11:28.819  3122  3344 I libnfc_nci: [INFO:NativeNfcManager.cpp(276)] nfaConnectionCallback: event= 1
+01-14 01:11:28.819  3122  3344 I libnfc_nci: [INFO:NativeNfcManager.cpp(291)] nfaConnectionCallback: NFA_POLL_DISABLED_EVT: status = 3
+01-14 01:11:28.821  3122  3334 I libnfc_nci: [INFO:NativeNfcTag.cpp(1819)] nativeNfcTag_releaseRfInterfaceMutexLock: sRfInterfaceMutex unlock
+01-14 01:11:28.821  3122  3334 I libnfc_nci: [INFO:nfa_ee_api.cc(434)] handle:<0x0>protocol_mask:<0x4>/<0x0>/<0x0><0x0><0x0><0x0>
+01-14 01:11:28.821  3122  3334 I libnfc_nci: [INFO:nfa_ee_main.cc(403)] nfa_ee_find_ecb
+01-14 01:11:28.825  3122  3344 I libnfc_nci: [INFO:nfa_sys_main.cc(77)] NFA got event 0x0206
+01-14 01:11:28.825  3122  3344 I libnfc_nci: [INFO:nfa_ee_main.cc(641)] Event API_SET_PROTO_CFG(0x206), State: INIT_DONE(1)
+01-14 01:11:28.825  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(208)] nfa_ee_update_route_size nfcee_id:0x0 size_mask_proto:15 size_mask_tech:10
+01-14 01:11:28.825  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(304)] nfa_ee_total_lmrt_size size:25
+01-14 01:11:28.828  3122  3344 I libnfc_nci: [INFO:nfa_dm_main.cc(194)] flags:0x1
+01-14 01:11:28.828  3122  3344 I libnfc_nci: [INFO:nfa_sys_ptim.cc(128)] nfa_sys_ptim_start_timer 0x76fbfcf9f0
+01-14 01:11:28.828  3122  3344 I libnfc_nci: [INFO:nfa_sys_ptim.cc(133)] ptim timer start
+01-14 01:11:28.828  3122  3344 I libnfc_nci: [INFO:RoutingManager.cpp(735)] RoutingManager::nfaEeCallback: NFA_EE_SET_PROTO_CFG_EVT; status=0x0
+01-14 01:11:28.829  3122  3334 I libnfc_nci: [INFO:nfa_ee_api.cc(434)] handle:<0x0>protocol_mask:<0x8>/<0x0>/<0x0><0x8><0x0><0x0>
+01-14 01:11:28.829  3122  3334 I libnfc_nci: [INFO:nfa_ee_main.cc(403)] nfa_ee_find_ecb
+01-14 01:11:28.829  3122  3344 I libnfc_nci: [INFO:nfa_sys_main.cc(77)] NFA got event 0x0206
+01-14 01:11:28.830  3122  3344 I libnfc_nci: [INFO:nfa_ee_main.cc(641)] Event API_SET_PROTO_CFG(0x206), State: INIT_DONE(1)
+01-14 01:11:28.831  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(208)] nfa_ee_update_route_size nfcee_id:0x0 size_mask_proto:15 size_mask_tech:10
+01-14 01:11:28.831  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(304)] nfa_ee_total_lmrt_size size:25
+01-14 01:11:28.831  3122  3344 I libnfc_nci: [INFO:nfa_dm_main.cc(194)] flags:0x1
+01-14 01:11:28.831  3122  3344 I libnfc_nci: [INFO:nfa_sys_ptim.cc(128)] nfa_sys_ptim_start_timer 0x76fbfcf9f0
+01-14 01:11:28.831  3122  3344 I libnfc_nci: [INFO:RoutingManager.cpp(735)] RoutingManager::nfaEeCallback: NFA_EE_SET_PROTO_CFG_EVT; status=0x0
+01-14 01:11:28.831  3122  3334 I libnfc_nci: [INFO:nfa_ee_api.cc(303)] handle:<0x0>technology_mask:<0x1>/<0x0>/<0x0><0x1><0x1><0x1>
+01-14 01:11:28.831  3122  3334 I libnfc_nci: [INFO:nfa_ee_main.cc(403)] nfa_ee_find_ecb
+01-14 01:11:28.831  3122  3344 I libnfc_nci: [INFO:nfa_sys_main.cc(77)] NFA got event 0x0204
+01-14 01:11:28.832  3122  3344 I libnfc_nci: [INFO:nfa_ee_main.cc(641)] Event API_SET_TECH_CFG(0x204), State: INIT_DONE(1)
+01-14 01:11:28.832  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(208)] nfa_ee_update_route_size nfcee_id:0x0 size_mask_proto:15 size_mask_tech:10
+01-14 01:11:28.832  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(304)] nfa_ee_total_lmrt_size size:25
+01-14 01:11:28.832  3122  3344 I libnfc_nci: [INFO:nfa_dm_main.cc(194)] flags:0x1
+01-14 01:11:28.832  3122  3344 I libnfc_nci: [INFO:nfa_sys_ptim.cc(128)] nfa_sys_ptim_start_timer 0x76fbfcf9f0
+01-14 01:11:28.832  3122  3344 I libnfc_nci: [INFO:RoutingManager.cpp(721)] RoutingManager::nfaEeCallback: NFA_EE_SET_TECH_CFG_EVT; status=0x0
+01-14 01:11:28.832  3122  3334 I libnfc_nci: [INFO:nfa_ee_api.cc(303)] handle:<0x0>technology_mask:<0x4>/<0x0>/<0x0><0x4><0x4><0x4>
+01-14 01:11:28.832  3122  3334 I libnfc_nci: [INFO:nfa_ee_main.cc(403)] nfa_ee_find_ecb
+01-14 01:11:28.832  3122  3344 I libnfc_nci: [INFO:nfa_sys_main.cc(77)] NFA got event 0x0204
+01-14 01:11:28.832  3122  3344 I libnfc_nci: [INFO:nfa_ee_main.cc(641)] Event API_SET_TECH_CFG(0x204), State: INIT_DONE(1)
+01-14 01:11:28.833  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(208)] nfa_ee_update_route_size nfcee_id:0x0 size_mask_proto:15 size_mask_tech:10
+01-14 01:11:28.833  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(304)] nfa_ee_total_lmrt_size size:25
+01-14 01:11:28.833  3122  3344 I libnfc_nci: [INFO:nfa_dm_main.cc(194)] flags:0x1
+01-14 01:11:28.833  3122  3344 I libnfc_nci: [INFO:nfa_sys_ptim.cc(128)] nfa_sys_ptim_start_timer 0x76fbfcf9f0
+01-14 01:11:28.833  3122  3344 I libnfc_nci: [INFO:RoutingManager.cpp(721)] RoutingManager::nfaEeCallback: NFA_EE_SET_TECH_CFG_EVT; status=0x0
+01-14 01:11:28.833  3122  3334 I libnfc_nci: [INFO:RoutingManager.cpp(310)] RoutingManager::commitRouting
+01-14 01:11:28.833  3122  3334 I libnfc_nci: [INFO:nfa_ee_api.cc(803)] NFA_EeUpdateNow
+01-14 01:11:28.833  3122  3344 I libnfc_nci: [INFO:nfa_sys_main.cc(77)] NFA got event 0x020D
+01-14 01:11:28.833  3122  3344 I libnfc_nci: [INFO:nfa_ee_main.cc(641)] Event API_UPDATE_NOW(0x20d), State: INIT_DONE(1)
+01-14 01:11:28.833  3122  3344 I libnfc_nci: [INFO:nfa_sys_ptim.cc(156)] nfa_sys_ptim_stop_timer 0x76fbfcf9f0
+01-14 01:11:28.833  3122  3344 I libnfc_nci: [INFO:nfa_sys_ptim.cc(163)] ptim timer stop
+01-14 01:11:28.833  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2713)] nfa_ee_rout_timeout
+01-14 01:11:28.833  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2673)] ee_cfged: 0x90 ee_cfg_sts: 0x10
+01-14 01:11:28.833  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2684)] 0: ecb_flags  : 0x06, mask: 0x10
+01-14 01:11:28.833  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2840)] nfa_ee_update_rout ee_cfg_sts:0x10
+01-14 01:11:28.833  3122  3344 I libnfc_nci: [INFO:nfa_ee_main.cc(641)] Event CFG_TO_NFCC(0x21b), State: INIT_DONE(1)
+01-14 01:11:28.833  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2786)] last_active: 0x1
+01-14 01:11:28.833  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2807)] nfa_ee_lmrt_to_nfcc --add the routing for NFCEEs!!
+01-14 01:11:28.833  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2560)] nfa_ee_route_add_one_ecb_by_route_order - max_len:720, cur_offset:0, more:1, num_tlv:0,rout_
+type:- 1
+01-14 01:11:28.833  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(463)] nfa_ee_add_aid_route_to_ecb - No AID entries available
+01-14 01:11:28.834  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(304)] nfa_ee_total_lmrt_size size:25
+01-14 01:11:28.834  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2606)] ee_cfg_sts:0x10 lmrt_size:25
+01-14 01:11:28.834  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2815)] nfa_ee_lmrt_to_nfcc --add the routing for DH!!
+01-14 01:11:28.834  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2560)] nfa_ee_route_add_one_ecb_by_route_order - max_len:720, cur_offset:0, more:1, num_tlv:0,rout_
+type:- 1
+01-14 01:11:28.834  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(463)] nfa_ee_add_aid_route_to_ecb - No AID entries available
+01-14 01:11:28.834  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(304)] nfa_ee_total_lmrt_size size:25
+01-14 01:11:28.834  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2606)] ee_cfg_sts:0x11 lmrt_size:25
+01-14 01:11:28.848     0     0 E nq-nci 6-0028: nfc_write: failed to write -107
+01-14 01:11:28.834  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2807)] nfa_ee_lmrt_to_nfcc --add the routing for NFCEEs!!
+01-14 01:11:28.834  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2560)] nfa_ee_route_add_one_ecb_by_route_order - max_len:720, cur_offset:0, more:1, num_tlv:0,rout_
+type:- 2
+01-14 01:11:28.834  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2591)] nfa_ee_route_add_one_ecb_by_route_order -  Route type - NA:- 2
+01-14 01:11:28.834  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(304)] nfa_ee_total_lmrt_size size:25
+01-14 01:11:28.834  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2606)] ee_cfg_sts:0x11 lmrt_size:25
+01-14 01:11:28.834  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2815)] nfa_ee_lmrt_to_nfcc --add the routing for DH!!
+01-14 01:11:28.834  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2560)] nfa_ee_route_add_one_ecb_by_route_order - max_len:720, cur_offset:0, more:1, num_tlv:0,rout_
+type:- 2
+01-14 01:11:28.834  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2591)] nfa_ee_route_add_one_ecb_by_route_order -  Route type - NA:- 2
+01-14 01:11:28.834  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(304)] nfa_ee_total_lmrt_size size:25
+01-14 01:11:28.834  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2606)] ee_cfg_sts:0x11 lmrt_size:25
+01-14 01:11:28.834  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2807)] nfa_ee_lmrt_to_nfcc --add the routing for NFCEEs!!
+01-14 01:11:28.834  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2560)] nfa_ee_route_add_one_ecb_by_route_order - max_len:720, cur_offset:0, more:1, num_tlv:0,rout_
+type:- 3
+01-14 01:11:28.834  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(516)] nfa_ee_add_sys_code_route_to_ecb - No SC entries available
+01-14 01:11:28.834  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(304)] nfa_ee_total_lmrt_size size:25
+01-14 01:11:28.834  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2606)] ee_cfg_sts:0x11 lmrt_size:25
+01-14 01:11:28.834  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2815)] nfa_ee_lmrt_to_nfcc --add the routing for DH!!
+01-14 01:11:28.835  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2560)] nfa_ee_route_add_one_ecb_by_route_order - max_len:720, cur_offset:0, more:1, num_tlv:0,rout_
+type:- 3
+01-14 01:11:28.835  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(516)] nfa_ee_add_sys_code_route_to_ecb - No SC entries available
+01-14 01:11:28.835  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(304)] nfa_ee_total_lmrt_size size:25
+01-14 01:11:28.835  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2606)] ee_cfg_sts:0x11 lmrt_size:25
+01-14 01:11:28.835  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2807)] nfa_ee_lmrt_to_nfcc --add the routing for NFCEEs!!
+01-14 01:11:28.835  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2560)] nfa_ee_route_add_one_ecb_by_route_order - max_len:720, cur_offset:0, more:1, num_tlv:0,rout_
+type:- 4
+01-14 01:11:28.835  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(304)] nfa_ee_total_lmrt_size size:25
+01-14 01:11:28.835  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2606)] ee_cfg_sts:0x11 lmrt_size:25
+01-14 01:11:28.835  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2815)] nfa_ee_lmrt_to_nfcc --add the routing for DH!!
+01-14 01:11:28.835  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2560)] nfa_ee_route_add_one_ecb_by_route_order - max_len:720, cur_offset:0, more:1, num_tlv:0,rout_
+type:- 4
+01-14 01:11:28.835  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(388)] nfa_ee_add_proto_route_to_ecb - NFC DEP added for DH!!!
+01-14 01:11:28.835  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(304)] nfa_ee_total_lmrt_size size:25
+01-14 01:11:28.835  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2606)] ee_cfg_sts:0x11 lmrt_size:25
+01-14 01:11:28.835  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2807)] nfa_ee_lmrt_to_nfcc --add the routing for NFCEEs!!
+01-14 01:11:28.835  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2560)] nfa_ee_route_add_one_ecb_by_route_order - max_len:720, cur_offset:15, more:1, num_tlv:3,rout
+_type:- 5
+01-14 01:11:28.835  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(304)] nfa_ee_total_lmrt_size size:25
+01-14 01:11:28.835  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2606)] ee_cfg_sts:0x11 lmrt_size:25
+01-14 01:11:28.835  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2815)] nfa_ee_lmrt_to_nfcc --add the routing for DH!!
+01-14 01:11:28.835  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2560)] nfa_ee_route_add_one_ecb_by_route_order - max_len:720, cur_offset:15, more:0, num_tlv:3,rout
+_type:- 5
+01-14 01:11:28.835  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(304)] nfa_ee_total_lmrt_size size:25
+01-14 01:11:28.835  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2606)] ee_cfg_sts:0x11 lmrt_size:25
+01-14 01:11:28.835  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2617)] nfa_ee_route_add_one_ecb_by_route_order : set routing num_tlv:5 tlv_size:25
+01-14 01:11:28.835  3122  3344 I libnfc_nci: [INFO:NfcAdaptation.cc(751)] NfcAdaptation::HalWrite
+01-14 01:11:28.836   766   766 D NxpExtns: find found MIFARE_READER_ENABLE=(0x1)
+01-14 01:11:28.836   766   766 D NfccPowerTracker: NfccPowerTracker::ProcessCmd: Enter,Recieved len :30
+01-14 01:11:28.836   766  3357 D NxpTml  : PN54X - Write requested.....
+01-14 01:11:28.836   766  3357 D NxpTml  : PN54X - Invoking I2C Write.....
+01-14 01:11:28.854   766  3357 D NxpTml  : _i2c_write() errno : 5
+01-14 01:11:28.854   766  3357 D NxpTml  : PN54X - Error in I2C Write.....
+01-14 01:11:28.854   766  3357 D NxpTml  : PN54X - Posting Fresh Write message.....
+01-14 01:11:28.854   766  3357 D NxpTml  : PN54X - Tml Writer Thread Running................
+01-14 01:11:28.854   766  3359 D NxpHal  : write error status = 0x1ff
+01-14 01:11:28.854   766   766 D NxpHal  : write_unlocked failed - PN54X Maybe in Standby Mode - Retry
+01-14 01:11:28.866   766  3357 D NxpTml  : PN54X - Write requested.....
+01-14 01:11:28.866   766  3357 D NxpTml  : PN54X - Invoking I2C Write.....
+01-14 01:11:28.870   766  3355 D NxpTml  : PN54X - I2C Read successful.....
+01-14 01:11:28.870   766  3355 D NxpTml  : Delay Read if write thread is busy
+01-14 01:11:28.870   766  3357 D NxpNciX : len =  30 > 21011B000501030001030103000104010300010500030001000003000102
+01-14 01:11:28.870   766  3357 D NxpTml  : PN54X - I2C Write successful.....
+01-14 01:11:28.870   766  3357 D NxpTml  : PN54X - Posting Fresh Write message.....
+01-14 01:11:28.880     0     0 E nq-nci 6-0028: nfc_read : reading 1 bytes.
+01-14 01:11:28.871   766  3357 D NxpTml  : PN54X - Tml Writer Thread Running................
+01-14 01:11:28.871   766  3359 D NxpHal  : write successful status = 0x0
+01-14 01:11:28.871  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2862)] nfa_ee_update_rout ee_cfg_sts:0x10 ee_cfged:0x10
+01-14 01:11:28.873   766  3355 D NxpNciR : len =   4 > 41010100
+01-14 01:11:28.873   766  3355 D NxpTml  : PN54X - Posting read message.....
+01-14 01:11:28.874   766  3359 D NxpHal  : read successful status = 0x0
+01-14 01:11:28.875  3122  3344 I libnfc_nci: [INFO:nfc_ncif.cc(399)] NFC received rsp gid:1
+01-14 01:11:28.875  3122  3344 I libnfc_nci: [INFO:nfa_dm_act.cc(268)] NFC_SET_ROUTING_REVT(0x500a)
+01-14 01:11:28.875  3122  3344 I libnfc_nci: [INFO:nfa_ee_main.cc(359)] nfa_ee_proc_evt: event=0x500a int_event:0x218
+01-14 01:11:28.875   766  3355 D NxpTml  : PN54X - Read requested.....
+01-14 01:11:28.875  3122  3344 I libnfc_nci: [INFO:nfa_ee_main.cc(641)] Event NCI_WAIT_RSP(0x218), State: INIT_DONE(1)
+01-14 01:11:28.875   766  3355 D NxpTml  : PN54X - Invoking I2C Read.....
+01-14 01:11:28.875  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2248)] ee_wait_evt:0x30 wait_rsp:1
+01-14 01:11:28.875  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2221)] nfa_ee_report_update_evt ee_wait_evt:0x30 wait_rsp:0
+01-14 01:11:28.876  3122  3344 I libnfc_nci: [INFO:RoutingManager.cpp(834)] RoutingManager::nfaEeCallback: NFA_EE_UPDATED_EVT
+01-14 01:11:28.876  3122  3334 I libnfc_nci: [INFO:NativeNfcManager.cpp(2103)] startRfDiscovery: is start=1
+01-14 01:11:28.876  3122  3334 I libnfc_nci: [INFO:NativeNfcTag.cpp(1801)] nativeNfcTag_acquireRfInterfaceMutexLock: try to acquire lock
+01-14 01:11:28.876  3122  3334 I libnfc_nci: [INFO:NativeNfcTag.cpp(1804)] nativeNfcTag_acquireRfInterfaceMutexLock: sRfInterfaceMutex lock
+01-14 01:11:28.876  3122  3334 I libnfc_nci: [INFO:nfa_dm_api.cc(691)] NFA_StartRfDiscovery
+01-14 01:11:28.876  3122  3344 I libnfc_nci: [INFO:nfa_sys_main.cc(77)] NFA got event 0x010E
+01-14 01:11:28.877  3122  3344 I libnfc_nci: [INFO:nfa_dm_main.cc(122)] event: NFA_DM_API_START_RF_DISCOVERY_EVT (0x0e)
+01-14 01:11:28.877  3122  3344 I libnfc_nci: [INFO:nfa_dm_act.cc(1230)] nfa_dm_act_start_rf_discovery
+01-14 01:11:28.877  3122  3344 I libnfc_nci: [INFO:nfa_dm_discover.cc(884)] nfa_dm_start_rf_discover
+01-14 01:11:28.877  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2484)] 1
+01-14 01:11:28.877  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2508)] 0x0, 0x0, 0x0, 0x0
+01-14 01:11:28.877  3122  3344 I libnfc_nci: [INFO:nfa_dm_discover.cc(1012)] nfa_dm_cb.disc_cb.entry[0].selected_disc_mask = 0x40000
+01-14 01:11:28.877  3122  3344 I libnfc_nci: [INFO:nfa_dm_discover.cc(1050)] dm_disc_mask = 0x40000
+01-14 01:11:28.877  3122  3344 I libnfc_nci: [INFO:nfa_dm_discover.cc(280)] tech_proto_mask = 0x00040000
+01-14 01:11:28.877  3122  3344 I libnfc_nci: [INFO:nfa_dm_main.cc(222)] nfa_dm_check_set_config
+01-14 01:11:28.877  3122  3344 I libnfc_nci: [INFO:NfcAdaptation.cc(751)] NfcAdaptation::HalWrite
+01-14 01:11:28.878   766   766 D NxpExtns: find found MIFARE_READER_ENABLE=(0x1)
+01-14 01:11:28.878   766   766 D NfccPowerTracker: NfccPowerTracker::ProcessCmd: Enter,Recieved len :10
+01-14 01:11:28.878   766  3357 D NxpTml  : PN54X - Write requested.....
+01-14 01:11:28.878   766  3357 D NxpTml  : PN54X - Invoking I2C Write.....
+01-14 01:11:28.881   766  3357 D NxpNciX : len =  10 > 20020702320120500100
+01-14 01:11:28.881   766  3357 D NxpTml  : PN54X - I2C Write successful.....
+01-14 01:11:28.886     0     0 E nq-nci 6-0028: nfc_read : reading 3 bytes.
+01-14 01:11:28.881   766  3357 D NxpTml  : PN54X - Posting Fresh Write message.....
+01-14 01:11:28.881   766  3357 D NxpTml  : PN54X - Tml Writer Thread Running................
+01-14 01:11:28.881   766  3359 D NxpHal  : write successful status = 0x0
+01-14 01:11:28.882  3122  3344 I libnfc_nci: [INFO:nfa_dm_discover.cc(370)] nfa_dm_set_total_duration
+01-14 01:11:28.882  3122  3344 I libnfc_nci: [INFO:nfa_dm_main.cc(222)] nfa_dm_check_set_config
+01-14 01:11:28.883  3122  3344 I libnfc_nci: [INFO:nfc_main.cc(888)] NFC_DiscoveryStart
+01-14 01:11:28.883  3122  3344 I libnfc_nci: [INFO:nfc_main.cc(908)] NFC_DiscoveryStart status: 0xe3
+01-14 01:11:28.899     0     0 E nq-nci 6-0028: nfc_read : reading 2 bytes.
+01-14 01:11:28.892   766  3355 D NxpTml  : PN54X - I2C Read successful.....
+01-14 01:11:28.892   766  3355 D NxpNciR : len =   5 > 4002020000
+01-14 01:11:28.892   766  3355 D NxpTml  : PN54X - Posting read message.....
+01-14 01:11:28.892   766  3359 D NxpHal  : read successful status = 0x0
+01-14 01:11:28.893   766  3359 D NxpHal  : phNxpNciHal_print_res_status: response status =STATUS_OK
+01-14 01:11:28.897  3122  3344 I libnfc_nci: [INFO:nfc_ncif.cc(399)] NFC received rsp gid:0
+01-14 01:11:28.897   766  3355 D NxpTml  : PN54X - Read requested.....
+01-14 01:11:28.897   766  3355 D NxpTml  : PN54X - Invoking I2C Read.....
+01-14 01:11:28.897  3122  3344 I libnfc_nci: [INFO:nci_hrcv.cc(62)] nci_proc_core_rsp opcode:0x2
+01-14 01:11:28.897  3122  3344 I libnfc_nci: [INFO:nfa_dm_act.cc(268)] NFC_SET_CONFIG_REVT(0x5002)
+01-14 01:11:28.897  3122  3344 I libnfc_nci: [INFO:NfcAdaptation.cc(792)] NfcAdaptation::HalPrediscover
+01-14 01:11:28.897  3122  3344 I libnfc_nci: [INFO:NfcAdaptation.cc(751)] NfcAdaptation::HalWrite
+01-14 01:11:28.898   766   766 D NxpExtns: find found MIFARE_READER_ENABLE=(0x1)
+01-14 01:11:28.898   766   766 D NxpHal  : > Polling Loop Started
+01-14 01:11:28.898   766   766 D NxpHal  : phNxpNciHal_discovery_cmd_ext
+01-14 01:11:28.898   766   766 D NfccPowerTracker: NfccPowerTracker::ProcessCmd: Enter,Recieved len :6
+01-14 01:11:28.898   766  3357 D NxpTml  : PN54X - Write requested.....
+01-14 01:11:28.898   766  3357 D NxpTml  : PN54X - Invoking I2C Write.....
+01-14 01:11:28.901   766  3357 D NxpNciX : len =   6 > 210303018001
+01-14 01:11:28.901   766  3357 D NxpTml  : PN54X - I2C Write successful.....
+01-14 01:11:28.901   766  3357 D NxpTml  : PN54X - Posting Fresh Write message.....
+01-14 01:11:28.901   766  3357 D NxpTml  : PN54X - Tml Writer Thread Running................
+01-14 01:11:28.907     0     0 E nq-nci 6-0028: nfc_read : reading 3 bytes.
+01-14 01:11:28.911     0     0 E nq-nci 6-0028: nfc_read : reading 1 bytes.
+01-14 01:11:28.901   766  3359 D NxpHal  : write successful status = 0x0
+01-14 01:11:28.908   766  3355 D NxpTml  : PN54X - I2C Read successful.....
+01-14 01:11:28.909   766  3355 D NxpNciR : len =   4 > 41030100
+01-14 01:11:28.909   766  3355 D NxpTml  : PN54X - Posting read message.....
+01-14 01:11:28.910   766  3359 D NxpHal  : read successful status = 0x0
+01-14 01:11:28.911  3122  3344 I libnfc_nci: [INFO:nfc_ncif.cc(399)] NFC received rsp gid:1
+01-14 01:11:28.911  3122  3344 I libnfc_nci: [INFO:nfa_dm_discover.cc(3030)] returning TRUE
+01-14 01:11:28.911  3122  3344 I libnfc_nci: [INFO:nfa_dm_discover.cc(694)] event:0x4000
+01-14 01:11:28.911  3122  3344 I libnfc_nci: [INFO:nfa_dm_discover.cc(2518)] state: IDLE (0), event: DISCOVER_RSP(1) disc_flags: 0x31
+01-14 01:11:28.911  3122  3344 I libnfc_nci: [INFO:nfa_dm_discover.cc(1685)] old_state: IDLE (0), new_state: DISCOVERY (1) disc_flags: 0x11
+01-14 01:11:28.911  3122  3344 I libnfc_nci: [INFO:NativeNfcManager.cpp(276)] nfaConnectionCallback: event= 30
+01-14 01:11:28.911  3122  3344 I libnfc_nci: [INFO:NativeNfcManager.cpp(301)] nfaConnectionCallback: NFA_RF_DISCOVERY_STARTED_EVT: status = 0
+01-14 01:11:28.911  3122  3344 I libnfc_nci: [INFO:nfa_dm_discover.cc(2571)] new state: DISCOVERY (1), disc_flags: 0x1
+01-14 01:11:28.911  3122  3334 I libnfc_nci: [INFO:NativeNfcTag.cpp(1819)] nativeNfcTag_releaseRfInterfaceMutexLock: sRfInterfaceMutex unlock
+01-14 01:11:28.912  3122  3334 I libnfc_nci: [INFO:PowerSwitch.cpp(258)] PowerSwitch::setModeOn(activated=0x1) : mCurrActivity=0x1
+01-14 01:11:28.912  3122  3334 I libnfc_nci: [INFO:NativeNfcManager.cpp(1306)] nfcManager_enableDiscovery: exit
+01-14 01:11:28.916   766  3355 D NxpTml  : PN54X - Read requested.....
+01-14 01:11:28.916   766  3355 D NxpTml  : PN54X - Invoking I2C Read.....
+01-14 01:11:28.926     0     0 E nq-nci 6-0028: nfc_read : reading 3 bytes.
+01-14 01:11:28.987  1881  1933 I am_pss  : [3122,1027,com.android.nfc,11450368,9650176,0,56963072,0,0,8]
+01-14 01:11:29.916  3122  3122 D NfcService: MSG_APPLY_SCREEN_STATE 8
+01-14 01:11:29.917  3122  3122 I libnfc_nci: [INFO:NativeNfcManager.cpp(1231)] nfcManager_enableDiscovery: enter; tech_mask = ef
+01-14 01:11:29.917  3122  3122 I libnfc_nci: [INFO:PowerSwitch.cpp(154)] PowerSwitch::setLevel: level=PS-FULL (1)
+01-14 01:11:29.917  3122  3122 I libnfc_nci: [INFO:NativeNfcManager.cpp(2103)] startRfDiscovery: is start=0
+01-14 01:11:29.917  3122  3122 I libnfc_nci: [INFO:NativeNfcTag.cpp(1801)] nativeNfcTag_acquireRfInterfaceMutexLock: try to acquire lock
+01-14 01:11:29.917  3122  3122 I libnfc_nci: [INFO:NativeNfcTag.cpp(1804)] nativeNfcTag_acquireRfInterfaceMutexLock: sRfInterfaceMutex lock
+01-14 01:11:29.917  3122  3122 I libnfc_nci: [INFO:nfa_dm_api.cc(721)] NFA_StopRfDiscovery
+01-14 01:11:29.919  3122  3344 I libnfc_nci: [INFO:nfa_sys_main.cc(77)] NFA got event 0x010F
+01-14 01:11:29.922  3122  3344 I libnfc_nci: [INFO:nfa_dm_main.cc(122)] event: NFA_DM_API_STOP_RF_DISCOVERY_EVT (0x0f)
+01-14 01:11:29.923  3122  3344 I libnfc_nci: [INFO:nfa_dm_act.cc(1259)] nfa_dm_act_stop_rf_discovery
+01-14 01:11:29.923  3122  3344 I libnfc_nci: [INFO:nfa_dm_discover.cc(2752)] deactivate_type:0x0
+01-14 01:11:29.923  3122  3344 I libnfc_nci: [INFO:nfa_dm_discover.cc(2518)] state: DISCOVERY (1), event: DEACTIVATE_CMD(6) disc_flags: 0x2
+01-14 01:11:29.923  3122  3344 I libnfc_nci: [INFO:nfc_main.cc(1127)] NFC_Deactivate 4 (IDLE) deactivate_type:0
+01-14 01:11:29.923  3122  3344 I libnfc_nci: [INFO:NfcAdaptation.cc(751)] NfcAdaptation::HalWrite
+01-14 01:11:29.923   766   766 D NxpExtns: find found MIFARE_READER_ENABLE=(0x1)
+01-14 01:11:29.923   766   766 D NfccPowerTracker: NfccPowerTracker::ProcessCmd: Enter,Recieved len :4
+01-14 01:11:29.924   766  3357 D NxpTml  : PN54X - Write requested.....
+01-14 01:11:29.924   766  3357 D NxpTml  : PN54X - Invoking I2C Write.....
+01-14 01:11:29.937     0     0 E nq-nci 6-0028: nfc_write: failed to write -107
+01-14 01:11:29.941   766  3357 D NxpTml  : _i2c_write() errno : 5
+01-14 01:11:29.942   766  3357 D NxpTml  : PN54X - Error in I2C Write.....
+01-14 01:11:29.942   766  3357 D NxpTml  : PN54X - Posting Fresh Write message.....
+01-14 01:11:29.942   766  3357 D NxpTml  : PN54X - Tml Writer Thread Running................
+01-14 01:11:29.942   766  3359 D NxpHal  : write error status = 0x1ff
+01-14 01:11:29.942   766   766 D NxpHal  : write_unlocked failed - PN54X Maybe in Standby Mode - Retry
+01-14 01:11:29.952   766  3357 D NxpTml  : PN54X - Write requested.....
+01-14 01:11:29.952   766  3357 D NxpTml  : PN54X - Invoking I2C Write.....
+01-14 01:11:29.954   766  3357 D NxpNciX : len =   4 > 21060100
+01-14 01:11:29.954   766  3357 D NxpTml  : PN54X - I2C Write successful.....
+01-14 01:11:29.954   766  3357 D NxpTml  : PN54X - Posting Fresh Write message.....
+01-14 01:11:29.954   766  3357 D NxpTml  : PN54X - Tml Writer Thread Running................
+01-14 01:11:29.954   766  3359 D NxpHal  : write successful status = 0x0
+01-14 01:11:29.955  3122  3344 I libnfc_nci: [INFO:nfa_dm_discover.cc(2571)] new state: DISCOVERY (1), disc_flags: 0x22
+01-14 01:11:29.955  3122  3344 I libnfc_nci: [INFO:nfa_sys_ptim.cc(156)] nfa_sys_ptim_stop_timer 0x76fbfd04f8
+01-14 01:11:29.955  3122  3344 I libnfc_nci: [INFO:nfa_sys_ptim.cc(163)] ptim timer stop
+01-14 01:11:29.955  3122  3344 I libnfc_nci: [INFO:nfa_rw_act.cc(192)] Stopped presence check timer (if started)
+01-14 01:11:29.955   766  3355 D NxpTml  : PN54X - I2C Read successful.....
+01-14 01:11:29.955   766  3355 D NxpNciR : len =   4 > 41060100
+01-14 01:11:29.955   766  3355 D NxpTml  : PN54X - Posting read message.....
+01-14 01:11:29.955   766  3359 D NxpHal  : read successful status = 0x0
+01-14 01:11:29.955  3122  3344 I libnfc_nci: [INFO:nfc_ncif.cc(399)] NFC received rsp gid:1
+01-14 01:11:29.955  3122  3344 I libnfc_nci: [INFO:nfa_dm_discover.cc(2926)] P2P_Prio_Logic
+01-14 01:11:29.956  3122  3344 I libnfc_nci: [INFO:nfa_dm_discover.cc(2934)] nfa_dm_p2p_prio_logic event_type = 0x1
+01-14 01:11:29.956   766  3355 D NxpTml  : PN54X - Read requested.....
+01-14 01:11:29.956   766  3355 D NxpTml  : PN54X - Invoking I2C Read.....
+01-14 01:11:29.956  3122  3344 I libnfc_nci: [INFO:nfa_dm_discover.cc(3030)] returning TRUE
+01-14 01:11:29.961  3122  3344 I libnfc_nci: [INFO:nfc_main.cc(326)] nfc_set_state 4 (IDLE)->4 (IDLE)
+01-14 01:11:29.961  3122  3344 I libnfc_nci: [INFO:nfa_dm_discover.cc(1662)] nfa_dm_disc_data_cback
+01-14 01:11:29.961  3122  3344 I libnfc_nci: [INFO:nfa_dm_discover.cc(694)] event:0x4005
+01-14 01:11:29.961  3122  3344 I libnfc_nci: [INFO:nfa_dm_discover.cc(2518)] state: DISCOVERY (1), event: DEACTIVATE_RSP(7) disc_flags: 0x22
+01-14 01:11:29.961  3122  3344 I libnfc_nci: [INFO:nfa_dm_discover.cc(1685)] old_state: DISCOVERY (1), new_state: IDLE (0) disc_flags: 0x2
+01-14 01:11:29.965     0     0 E nq-nci 6-0028: nfc_read : reading 1 bytes.
+01-14 01:11:29.967     0     0 E nq-nci 6-0028: nfc_read : reading 3 bytes.
+01-14 01:11:29.961  3122  3344 I libnfc_nci: [INFO:NativeNfcManager.cpp(276)] nfaConnectionCallback: event= 31
+01-14 01:11:29.961  3122  3344 I libnfc_nci: [INFO:NativeNfcManager.cpp(311)] nfaConnectionCallback: NFA_RF_DISCOVERY_STOPPED_EVT: status = 0
+01-14 01:11:29.961  3122  3344 I libnfc_nci: [INFO:nfa_dm_discover.cc(884)] nfa_dm_start_rf_discover
+01-14 01:11:29.961  3122  3344 I libnfc_nci: [INFO:nfa_dm_discover.cc(2571)] new state: IDLE (0), disc_flags: 0x0
+01-14 01:11:29.961  3122  3122 I libnfc_nci: [INFO:NativeNfcTag.cpp(1819)] nativeNfcTag_releaseRfInterfaceMutexLock: sRfInterfaceMutex unlock
+01-14 01:11:29.961  3122  3122 I libnfc_nci: [INFO:NativeNfcTag.cpp(1801)] nativeNfcTag_acquireRfInterfaceMutexLock: try to acquire lock
+01-14 01:11:29.962  3122  3122 I libnfc_nci: [INFO:NativeNfcTag.cpp(1804)] nativeNfcTag_acquireRfInterfaceMutexLock: sRfInterfaceMutex lock
+01-14 01:11:29.962  3122  3122 I libnfc_nci: [INFO:NativeNfcManager.cpp(2233)] stopPolling_rfDiscoveryDisabled: disable polling
+01-14 01:11:29.962  3122  3122 I libnfc_nci: [INFO:nfa_dm_api.cc(477)] NFA_DisablePolling
+01-14 01:11:29.964  3122  3344 I libnfc_nci: [INFO:nfa_sys_main.cc(77)] NFA got event 0x0107
+01-14 01:11:29.964  3122  3344 I libnfc_nci: [INFO:nfa_dm_main.cc(122)] event: NFA_DM_API_DISABLE_POLLING_EVT (0x07)
+01-14 01:11:29.964  3122  3344 I libnfc_nci: [INFO:nfa_dm_act.cc(1042)] nfa_dm_act_disable_polling
+01-14 01:11:29.964  3122  3344 I libnfc_nci: [INFO:NativeNfcManager.cpp(276)] nfaConnectionCallback: event= 1
+01-14 01:11:29.964  3122  3344 I libnfc_nci: [INFO:NativeNfcManager.cpp(291)] nfaConnectionCallback: NFA_POLL_DISABLED_EVT: status = 3
+01-14 01:11:29.964  3122  3122 I libnfc_nci: [INFO:NativeNfcTag.cpp(1819)] nativeNfcTag_releaseRfInterfaceMutexLock: sRfInterfaceMutex unlock
+01-14 01:11:29.964  3122  3122 I libnfc_nci: [INFO:NativeNfcTag.cpp(1801)] nativeNfcTag_acquireRfInterfaceMutexLock: try to acquire lock
+01-14 01:11:29.964  3122  3122 I libnfc_nci: [INFO:NativeNfcTag.cpp(1804)] nativeNfcTag_acquireRfInterfaceMutexLock: sRfInterfaceMutex lock
+01-14 01:11:29.964  3122  3122 I libnfc_nci: [INFO:NativeNfcManager.cpp(2211)] startPolling_rfDiscoveryDisabled: enable polling
+01-14 01:11:29.964  3122  3122 I libnfc_nci: [INFO:nfa_dm_api.cc(443)] 0xEF
+01-14 01:11:29.964  3122  3122 I libnfc_nci: [INFO:NativeNfcManager.cpp(2215)] startPolling_rfDiscoveryDisabled: wait for enable event
+01-14 01:11:29.965  3122  3344 I libnfc_nci: [INFO:nfa_sys_main.cc(77)] NFA got event 0x0106
+01-14 01:11:29.965  3122  3344 I libnfc_nci: [INFO:nfa_dm_main.cc(122)] event: NFA_DM_API_ENABLE_POLLING_EVT (0x06)
+01-14 01:11:29.965  3122  3344 I libnfc_nci: [INFO:nfa_dm_act.cc(977)] nfa_dm_act_enable_polling
+01-14 01:11:29.965  3122  3344 I libnfc_nci: [INFO:nfa_dm_act.cc(908)] nfa_dm_start_polling
+01-14 01:11:29.965  3122  3344 I libnfc_nci: [INFO:nfa_dm_discover.cc(2591)] disc_mask=0x7d7f
+01-14 01:11:29.965  3122  3344 I libnfc_nci: [INFO:NativeNfcManager.cpp(276)] nfaConnectionCallback: event= 0
+01-14 01:11:29.965  3122  3344 I libnfc_nci: [INFO:NativeNfcManager.cpp(282)] nfaConnectionCallback: NFA_POLL_ENABLED_EVT: status = 0
+01-14 01:11:29.965  3122  3122 I libnfc_nci: [INFO:NativeNfcTag.cpp(1819)] nativeNfcTag_releaseRfInterfaceMutexLock: sRfInterfaceMutex unlock
+01-14 01:11:29.965  3122  3122 I libnfc_nci: [INFO:NativeNfcManager.cpp(1253)] nfcManager_enableDiscovery: Enable p2pListening
+01-14 01:11:29.965  3122  3122 I libnfc_nci: [INFO:PeerToPeer.cpp(1119)] PeerToPeer::enableP2pListening: enter isEnable: 1  mIsP2pListening: 0
+01-14 01:11:29.965  3122  3122 I libnfc_nci: [INFO:nfa_dm_api.cc(658)] tech_mask:0xC5
+01-14 01:11:29.965  3122  3344 I libnfc_nci: [INFO:nfa_sys_main.cc(77)] NFA got event 0x010D
+01-14 01:11:29.965  3122  3344 I libnfc_nci: [INFO:nfa_dm_main.cc(122)] event: NFA_DM_API_SET_P2P_LISTEN_TECH_EVT (0x0d)
+01-14 01:11:29.965  3122  3344 I libnfc_nci: [INFO:nfa_dm_act.cc(1208)] tech_mask = 197
+01-14 01:11:29.967  3122  3344 I libnfc_nci: [INFO:nfa_p2p_main.cc(695)] tech_mask = 0xc5
+01-14 01:11:29.967  3122  3344 I libnfc_nci: [INFO:nfa_p2p_main.cc(587)] sys_id = 3, update_wks = 0
+01-14 01:11:29.967  3122  3344 I libnfc_nci: [INFO:nfa_dm_discover.cc(2591)] disc_mask=0xc480000
+01-14 01:11:29.967  3122  3344 I libnfc_nci: [INFO:NativeNfcManager.cpp(276)] nfaConnectionCallback: event= 33
+01-14 01:11:29.967  3122  3344 I libnfc_nci: [INFO:NativeNfcManager.cpp(622)] nfaConnectionCallback: NFA_SET_P2P_LISTEN_TECH_EVT
+01-14 01:11:29.967  3122  3122 I libnfc_nci: [INFO:PeerToPeer.cpp(1143)] PeerToPeer::enableP2pListening: exit; mIsP2pListening: 1
+01-14 01:11:29.967  3122  3122 I libnfc_nci: [INFO:nfa_dm_api.cc(621)] NFA_ResumeP2p
+01-14 01:11:29.967  3122  3122 I libnfc_nci: [INFO:nfa_ee_api.cc(434)] handle:<0x0>protocol_mask:<0x4>/<0x0>/<0x0><0x0><0x0><0x0>
+01-14 01:11:29.967  3122  3122 I libnfc_nci: [INFO:nfa_ee_main.cc(403)] nfa_ee_find_ecb
+01-14 01:11:29.968  3122  3344 I libnfc_nci: [INFO:nfa_sys_main.cc(77)] NFA got event 0x010B
+01-14 01:11:29.968  3122  3344 I libnfc_nci: [INFO:nfa_dm_main.cc(122)] event: NFA_DM_API_RESUME_P2P_EVT (0x0b)
+01-14 01:11:29.968  3122  3344 I libnfc_nci: [INFO:nfa_dm_act.cc(1139)] nfa_dm_act_resume_p2p
+01-14 01:11:29.968  3122  3344 I libnfc_nci: [INFO:NativeNfcManager.cpp(276)] nfaConnectionCallback: event= 39
+01-14 01:11:29.968  3122  3344 I libnfc_nci: [INFO:NativeNfcManager.cpp(628)] nfaConnectionCallback: unknown event ????
+01-14 01:11:29.968  3122  3344 I libnfc_nci: [INFO:nfa_sys_main.cc(77)] NFA got event 0x0206
+01-14 01:11:29.968  3122  3344 I libnfc_nci: [INFO:nfa_ee_main.cc(641)] Event API_SET_PROTO_CFG(0x206), State: INIT_DONE(1)
+01-14 01:11:29.968  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(208)] nfa_ee_update_route_size nfcee_id:0x0 size_mask_proto:15 size_mask_tech:10
+01-14 01:11:29.969  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(304)] nfa_ee_total_lmrt_size size:25
+01-14 01:11:29.969  3122  3344 I libnfc_nci: [INFO:nfa_dm_main.cc(194)] flags:0x5
+01-14 01:11:29.969  3122  3344 I libnfc_nci: [INFO:nfa_sys_ptim.cc(128)] nfa_sys_ptim_start_timer 0x76fbfcf9f0
+01-14 01:11:29.969  3122  3344 I libnfc_nci: [INFO:nfa_sys_ptim.cc(133)] ptim timer start
+01-14 01:11:29.969  3122  3344 I libnfc_nci: [INFO:RoutingManager.cpp(735)] RoutingManager::nfaEeCallback: NFA_EE_SET_PROTO_CFG_EVT; status=0x0
+01-14 01:11:29.969  3122  3122 I libnfc_nci: [INFO:nfa_ee_api.cc(434)] handle:<0x0>protocol_mask:<0x8>/<0x0>/<0x0><0x8><0x0><0x0>
+01-14 01:11:29.969  3122  3122 I libnfc_nci: [INFO:nfa_ee_main.cc(403)] nfa_ee_find_ecb
+01-14 01:11:29.969  3122  3344 I libnfc_nci: [INFO:nfa_sys_main.cc(77)] NFA got event 0x0206
+01-14 01:11:29.969  3122  3344 I libnfc_nci: [INFO:nfa_ee_main.cc(641)] Event API_SET_PROTO_CFG(0x206), State: INIT_DONE(1)
+01-14 01:11:29.969  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(208)] nfa_ee_update_route_size nfcee_id:0x0 size_mask_proto:15 size_mask_tech:10
+01-14 01:11:29.969  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(304)] nfa_ee_total_lmrt_size size:25
+01-14 01:11:29.969  3122  3344 I libnfc_nci: [INFO:nfa_dm_main.cc(194)] flags:0x5
+01-14 01:11:29.969  3122  3344 I libnfc_nci: [INFO:nfa_sys_ptim.cc(128)] nfa_sys_ptim_start_timer 0x76fbfcf9f0
+01-14 01:11:29.969  3122  3344 I libnfc_nci: [INFO:RoutingManager.cpp(735)] RoutingManager::nfaEeCallback: NFA_EE_SET_PROTO_CFG_EVT; status=0x0
+01-14 01:11:29.969  3122  3122 I libnfc_nci: [INFO:nfa_ee_api.cc(303)] handle:<0x0>technology_mask:<0x1>/<0x0>/<0x0><0x1><0x1><0x1>
+01-14 01:11:29.969  3122  3122 I libnfc_nci: [INFO:nfa_ee_main.cc(403)] nfa_ee_find_ecb
+01-14 01:11:29.970  3122  3344 I libnfc_nci: [INFO:nfa_sys_main.cc(77)] NFA got event 0x0204
+01-14 01:11:29.970  3122  3344 I libnfc_nci: [INFO:nfa_ee_main.cc(641)] Event API_SET_TECH_CFG(0x204), State: INIT_DONE(1)
+01-14 01:11:29.970  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(208)] nfa_ee_update_route_size nfcee_id:0x0 size_mask_proto:15 size_mask_tech:10
+01-14 01:11:29.970  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(304)] nfa_ee_total_lmrt_size size:25
+01-14 01:11:29.970  3122  3344 I libnfc_nci: [INFO:nfa_dm_main.cc(194)] flags:0x5
+01-14 01:11:29.970  3122  3344 I libnfc_nci: [INFO:nfa_sys_ptim.cc(128)] nfa_sys_ptim_start_timer 0x76fbfcf9f0
+01-14 01:11:29.970  3122  3344 I libnfc_nci: [INFO:RoutingManager.cpp(721)] RoutingManager::nfaEeCallback: NFA_EE_SET_TECH_CFG_EVT; status=0x0
+01-14 01:11:29.970  3122  3122 I libnfc_nci: [INFO:nfa_ee_api.cc(303)] handle:<0x0>technology_mask:<0x4>/<0x0>/<0x0><0x4><0x4><0x4>
+01-14 01:11:29.970  3122  3122 I libnfc_nci: [INFO:nfa_ee_main.cc(403)] nfa_ee_find_ecb
+01-14 01:11:29.970  3122  3344 I libnfc_nci: [INFO:nfa_sys_main.cc(77)] NFA got event 0x0204
+01-14 01:11:29.990     0     0 E nq-nci 6-0028: nfc_read : reading 1 bytes.
+01-14 01:11:29.991     0     0 E nq-nci 6-0028: nfc_read : reading 3 bytes.
+01-14 01:11:29.970  3122  3344 I libnfc_nci: [INFO:nfa_ee_main.cc(641)] Event API_SET_TECH_CFG(0x204), State: INIT_DONE(1)
+01-14 01:11:29.970  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(208)] nfa_ee_update_route_size nfcee_id:0x0 size_mask_proto:15 size_mask_tech:10
+01-14 01:11:29.970  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(304)] nfa_ee_total_lmrt_size size:25
+01-14 01:11:29.970  3122  3344 I libnfc_nci: [INFO:nfa_dm_main.cc(194)] flags:0x5
+01-14 01:11:29.970  3122  3344 I libnfc_nci: [INFO:nfa_sys_ptim.cc(128)] nfa_sys_ptim_start_timer 0x76fbfcf9f0
+01-14 01:11:29.970  3122  3344 I libnfc_nci: [INFO:RoutingManager.cpp(721)] RoutingManager::nfaEeCallback: NFA_EE_SET_TECH_CFG_EVT; status=0x0
+01-14 01:11:29.970  3122  3122 I libnfc_nci: [INFO:RoutingManager.cpp(310)] RoutingManager::commitRouting
+01-14 01:11:29.970  3122  3122 I libnfc_nci: [INFO:nfa_ee_api.cc(803)] NFA_EeUpdateNow
+01-14 01:11:29.971  3122  3344 I libnfc_nci: [INFO:nfa_sys_main.cc(77)] NFA got event 0x020D
+01-14 01:11:29.971  3122  3344 I libnfc_nci: [INFO:nfa_ee_main.cc(641)] Event API_UPDATE_NOW(0x20d), State: INIT_DONE(1)
+01-14 01:11:29.971  3122  3344 I libnfc_nci: [INFO:nfa_sys_ptim.cc(156)] nfa_sys_ptim_stop_timer 0x76fbfcf9f0
+01-14 01:11:29.971  3122  3344 I libnfc_nci: [INFO:nfa_sys_ptim.cc(163)] ptim timer stop
+01-14 01:11:29.971  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2713)] nfa_ee_rout_timeout
+01-14 01:11:29.971  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2673)] ee_cfged: 0x90 ee_cfg_sts: 0x10
+01-14 01:11:29.971  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2684)] 0: ecb_flags  : 0x06, mask: 0x10
+01-14 01:11:29.971  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2840)] nfa_ee_update_rout ee_cfg_sts:0x10
+01-14 01:11:29.971  3122  3344 I libnfc_nci: [INFO:nfa_ee_main.cc(641)] Event CFG_TO_NFCC(0x21b), State: INIT_DONE(1)
+01-14 01:11:29.971  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2786)] last_active: 0x1
+01-14 01:11:29.971  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2807)] nfa_ee_lmrt_to_nfcc --add the routing for NFCEEs!!
+01-14 01:11:29.971  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2560)] nfa_ee_route_add_one_ecb_by_route_order - max_len:720, cur_offset:0, more:1, num_tlv:0,rout_
+type:- 1
+01-14 01:11:29.971  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(463)] nfa_ee_add_aid_route_to_ecb - No AID entries available
+01-14 01:11:29.971  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(304)] nfa_ee_total_lmrt_size size:25
+01-14 01:11:29.971  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2606)] ee_cfg_sts:0x10 lmrt_size:25
+01-14 01:11:29.971  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2815)] nfa_ee_lmrt_to_nfcc --add the routing for DH!!
+01-14 01:11:29.971  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2560)] nfa_ee_route_add_one_ecb_by_route_order - max_len:720, cur_offset:0, more:1, num_tlv:0,rout_
+type:- 1
+01-14 01:11:29.971  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(463)] nfa_ee_add_aid_route_to_ecb - No AID entries available
+01-14 01:11:29.971  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(304)] nfa_ee_total_lmrt_size size:25
+01-14 01:11:29.971  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2606)] ee_cfg_sts:0x11 lmrt_size:25
+01-14 01:11:29.971  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2807)] nfa_ee_lmrt_to_nfcc --add the routing for NFCEEs!!
+01-14 01:11:29.971  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2560)] nfa_ee_route_add_one_ecb_by_route_order - max_len:720, cur_offset:0, more:1, num_tlv:0,rout_
+type:- 2
+01-14 01:11:29.971  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2591)] nfa_ee_route_add_one_ecb_by_route_order -  Route type - NA:- 2
+01-14 01:11:29.971  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(304)] nfa_ee_total_lmrt_size size:25
+01-14 01:11:29.972  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2606)] ee_cfg_sts:0x11 lmrt_size:25
+01-14 01:11:29.972  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2815)] nfa_ee_lmrt_to_nfcc --add the routing for DH!!
+01-14 01:11:29.972  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2560)] nfa_ee_route_add_one_ecb_by_route_order - max_len:720, cur_offset:0, more:1, num_tlv:0,rout_
+type:- 2
+01-14 01:11:29.972  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2591)] nfa_ee_route_add_one_ecb_by_route_order -  Route type - NA:- 2
+01-14 01:11:29.972  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(304)] nfa_ee_total_lmrt_size size:25
+01-14 01:11:29.972  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2606)] ee_cfg_sts:0x11 lmrt_size:25
+01-14 01:11:29.972  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2807)] nfa_ee_lmrt_to_nfcc --add the routing for NFCEEs!!
+01-14 01:11:29.972  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2560)] nfa_ee_route_add_one_ecb_by_route_order - max_len:720, cur_offset:0, more:1, num_tlv:0,rout_
+type:- 3
+01-14 01:11:29.972  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(516)] nfa_ee_add_sys_code_route_to_ecb - No SC entries available
+01-14 01:11:29.972  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(304)] nfa_ee_total_lmrt_size size:25
+01-14 01:11:29.972  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2606)] ee_cfg_sts:0x11 lmrt_size:25
+01-14 01:11:29.972  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2815)] nfa_ee_lmrt_to_nfcc --add the routing for DH!!
+01-14 01:11:29.972  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2560)] nfa_ee_route_add_one_ecb_by_route_order - max_len:720, cur_offset:0, more:1, num_tlv:0,rout_
+type:- 3
+01-14 01:11:29.972  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(516)] nfa_ee_add_sys_code_route_to_ecb - No SC entries available
+01-14 01:11:29.972  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(304)] nfa_ee_total_lmrt_size size:25
+01-14 01:11:29.972  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2606)] ee_cfg_sts:0x11 lmrt_size:25
+01-14 01:11:29.972  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2807)] nfa_ee_lmrt_to_nfcc --add the routing for NFCEEs!!
+01-14 01:11:29.972  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2560)] nfa_ee_route_add_one_ecb_by_route_order - max_len:720, cur_offset:0, more:1, num_tlv:0,rout_
+type:- 4
+01-14 01:11:29.972  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(304)] nfa_ee_total_lmrt_size size:25
+01-14 01:11:29.972  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2606)] ee_cfg_sts:0x11 lmrt_size:25
+01-14 01:11:29.972  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2815)] nfa_ee_lmrt_to_nfcc --add the routing for DH!!
+01-14 01:11:29.972  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2560)] nfa_ee_route_add_one_ecb_by_route_order - max_len:720, cur_offset:0, more:1, num_tlv:0,rout_
+type:- 4
+01-14 01:11:29.972  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(388)] nfa_ee_add_proto_route_to_ecb - NFC DEP added for DH!!!
+01-14 01:11:30.003     0     0 E nq-nci 6-0028: nfc_read : reading 2 bytes.
+01-14 01:11:30.005     0     0 E nq-nci 6-0028: nfc_read : reading 3 bytes.
+01-14 01:11:29.973  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(304)] nfa_ee_total_lmrt_size size:25
+01-14 01:11:29.973  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2606)] ee_cfg_sts:0x11 lmrt_size:25
+01-14 01:11:29.973  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2807)] nfa_ee_lmrt_to_nfcc --add the routing for NFCEEs!!
+01-14 01:11:29.973  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2560)] nfa_ee_route_add_one_ecb_by_route_order - max_len:720, cur_offset:15, more:1, num_tlv:3,rout
+_type:- 5
+01-14 01:11:29.973  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(304)] nfa_ee_total_lmrt_size size:25
+01-14 01:11:29.973  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2606)] ee_cfg_sts:0x11 lmrt_size:25
+01-14 01:11:29.973  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2815)] nfa_ee_lmrt_to_nfcc --add the routing for DH!!
+01-14 01:11:29.973  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2560)] nfa_ee_route_add_one_ecb_by_route_order - max_len:720, cur_offset:15, more:0, num_tlv:3,rout
+_type:- 5
+01-14 01:11:29.973  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(304)] nfa_ee_total_lmrt_size size:25
+01-14 01:11:29.973  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2606)] ee_cfg_sts:0x11 lmrt_size:25
+01-14 01:11:29.973  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2617)] nfa_ee_route_add_one_ecb_by_route_order : set routing num_tlv:5 tlv_size:25
+01-14 01:11:29.973  3122  3344 I libnfc_nci: [INFO:NfcAdaptation.cc(751)] NfcAdaptation::HalWrite
+01-14 01:11:29.973   766   766 D NxpExtns: find found MIFARE_READER_ENABLE=(0x1)
+01-14 01:11:29.973   766   766 D NfccPowerTracker: NfccPowerTracker::ProcessCmd: Enter,Recieved len :30
+01-14 01:11:29.973   766  3357 D NxpTml  : PN54X - Write requested.....
+01-14 01:11:29.973   766  3357 D NxpTml  : PN54X - Invoking I2C Write.....
+01-14 01:11:29.976   766  3357 D NxpNciX : len =  30 > 21011B000501030001030103000104010300010500030001000003000102
+01-14 01:11:29.976   766  3357 D NxpTml  : PN54X - I2C Write successful.....
+01-14 01:11:29.976   766  3357 D NxpTml  : PN54X - Posting Fresh Write message.....
+01-14 01:11:29.976   766  3357 D NxpTml  : PN54X - Tml Writer Thread Running................
+01-14 01:11:29.976   766  3359 D NxpHal  : write successful status = 0x0
+01-14 01:11:30.014     0     0 E nq-nci 6-0028: nfc_read : reading 1 bytes.
+01-14 01:11:29.979   766  3355 D NxpTml  : PN54X - I2C Read successful.....
+01-14 01:11:29.979   766  3355 D NxpNciR : len =   4 > 41010100
+01-14 01:11:29.979   766  3355 D NxpTml  : PN54X - Posting read message.....
+01-14 01:11:29.980   766  3359 D NxpHal  : read successful status = 0x0
+01-14 01:11:29.980  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2862)] nfa_ee_update_rout ee_cfg_sts:0x10 ee_cfged:0x10
+01-14 01:11:29.980  3122  3344 I libnfc_nci: [INFO:nfc_ncif.cc(399)] NFC received rsp gid:1
+01-14 01:11:29.980   766  3355 D NxpTml  : PN54X - Read requested.....
+01-14 01:11:29.980   766  3355 D NxpTml  : PN54X - Invoking I2C Read.....
+01-14 01:11:29.980  3122  3344 I libnfc_nci: [INFO:nfa_dm_act.cc(268)] NFC_SET_ROUTING_REVT(0x500a)
+01-14 01:11:29.981  3122  3344 I libnfc_nci: [INFO:nfa_ee_main.cc(359)] nfa_ee_proc_evt: event=0x500a int_event:0x218
+01-14 01:11:29.981  3122  3344 I libnfc_nci: [INFO:nfa_ee_main.cc(641)] Event NCI_WAIT_RSP(0x218), State: INIT_DONE(1)
+01-14 01:11:29.981  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2248)] ee_wait_evt:0x30 wait_rsp:1
+01-14 01:11:29.981  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2221)] nfa_ee_report_update_evt ee_wait_evt:0x30 wait_rsp:0
+01-14 01:11:29.982  3122  3344 I libnfc_nci: [INFO:RoutingManager.cpp(834)] RoutingManager::nfaEeCallback: NFA_EE_UPDATED_EVT
+01-14 01:11:29.983  3122  3122 I libnfc_nci: [INFO:NativeNfcManager.cpp(2103)] startRfDiscovery: is start=1
+01-14 01:11:29.983  3122  3122 I libnfc_nci: [INFO:NativeNfcTag.cpp(1801)] nativeNfcTag_acquireRfInterfaceMutexLock: try to acquire lock
+01-14 01:11:29.983  3122  3122 I libnfc_nci: [INFO:NativeNfcTag.cpp(1804)] nativeNfcTag_acquireRfInterfaceMutexLock: sRfInterfaceMutex lock
+01-14 01:11:29.983  3122  3122 I libnfc_nci: [INFO:nfa_dm_api.cc(691)] NFA_StartRfDiscovery
+01-14 01:11:29.983  3122  3344 I libnfc_nci: [INFO:nfa_sys_main.cc(77)] NFA got event 0x010E
+01-14 01:11:29.983  3122  3344 I libnfc_nci: [INFO:nfa_dm_main.cc(122)] event: NFA_DM_API_START_RF_DISCOVERY_EVT (0x0e)
+01-14 01:11:29.983  3122  3344 I libnfc_nci: [INFO:nfa_dm_act.cc(1230)] nfa_dm_act_start_rf_discovery
+01-14 01:11:29.983  3122  3344 I libnfc_nci: [INFO:nfa_dm_discover.cc(884)] nfa_dm_start_rf_discover
+01-14 01:11:29.983  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2484)] 1
+01-14 01:11:29.983  3122  3344 I libnfc_nci: [INFO:nfa_ee_act.cc(2508)] 0x0, 0x0, 0x0, 0x0
+01-14 01:11:29.983  3122  3344 I libnfc_nci: [INFO:nfa_dm_discover.cc(1012)] nfa_dm_cb.disc_cb.entry[0].selected_disc_mask = 0x40000
+01-14 01:11:29.983  3122  3344 I libnfc_nci: [INFO:nfa_dm_discover.cc(1012)] nfa_dm_cb.disc_cb.entry[1].selected_disc_mask = 0x7d7f
+01-14 01:11:29.983  3122  3344 I libnfc_nci: [INFO:nfa_dm_discover.cc(1012)] nfa_dm_cb.disc_cb.entry[2].selected_disc_mask = 0xc480000
+01-14 01:11:29.983  3122  3344 I libnfc_nci: [INFO:nfa_p2p_main.cc(524)] nfa_p2p_set_config
+01-14 01:11:29.983  3122  3344 I libnfc_nci: [INFO:llcp_api.cc(231)] LLCP_GetDiscoveryConfig
+01-14 01:11:29.984  3122  3344 I libnfc_nci: [INFO:nfa_dm_main.cc(222)] nfa_dm_check_set_config
+01-14 01:11:29.984  3122  3344 I chatty  : uid=1027(nfc) AsyncTask #1 identical 1 line
+01-14 01:11:29.984  3122  3344 I libnfc_nci: [INFO:nfa_dm_main.cc(222)] nfa_dm_check_set_config
+01-14 01:11:29.984  3122  3344 I libnfc_nci: [INFO:nfa_dm_discover.cc(1050)] dm_disc_mask = 0xc4c7d7f
+01-14 01:11:29.984  3122  3344 I libnfc_nci: [INFO:nfa_dm_discover.cc(280)] tech_proto_mask = 0x0C4C7D7F
+01-14 01:11:29.984  3122  3344 I libnfc_nci: [INFO:nfa_dm_main.cc(222)] nfa_dm_check_set_config
+01-14 01:11:29.984  3122  3344 I libnfc_nci: [INFO:NfcAdaptation.cc(751)] NfcAdaptation::HalWrite
+01-14 01:11:29.985   766   766 D NxpExtns: find found MIFARE_READER_ENABLE=(0x1)
+01-14 01:11:29.985   766   766 D NfccPowerTracker: NfccPowerTracker::ProcessCmd: Enter,Recieved len :10
+01-14 01:11:29.985   766  3357 D NxpTml  : PN54X - Write requested.....
+01-14 01:11:29.985   766  3357 D NxpTml  : PN54X - Invoking I2C Write.....
+01-14 01:11:29.987   766  3357 D NxpNciX : len =  10 > 20020702320160500102
+01-14 01:11:29.987   766  3357 D NxpTml  : PN54X - I2C Write successful.....
+01-14 01:11:29.987   766  3357 D NxpTml  : PN54X - Posting Fresh Write message.....
+01-14 01:11:29.987   766  3357 D NxpTml  : PN54X - Tml Writer Thread Running................
+01-14 01:11:29.987   766  3359 D NxpHal  : write successful status = 0x0
+01-14 01:11:29.987  3122  3344 I libnfc_nci: [INFO:nfa_dm_discover.cc(370)] nfa_dm_set_total_duration
+01-14 01:11:29.987  3122  3344 I libnfc_nci: [INFO:nfa_dm_main.cc(222)] nfa_dm_check_set_config
+01-14 01:11:29.987  3122  3344 I libnfc_nci: [INFO:nfc_main.cc(888)] NFC_DiscoveryStart
+01-14 01:11:29.987  3122  3344 I libnfc_nci: [INFO:nfc_main.cc(908)] NFC_DiscoveryStart status: 0xe3
+01-14 01:11:29.993   766  3355 D NxpTml  : PN54X - I2C Read successful.....
+01-14 01:11:29.993   766  3355 D NxpNciR : len =   5 > 4002020000
+01-14 01:11:29.993   766  3355 D NxpTml  : PN54X - Posting read message.....
+01-14 01:11:29.993   766  3359 D NxpHal  : read successful status = 0x0
+01-14 01:11:29.993   766  3359 D NxpHal  : phNxpNciHal_print_res_status: response status =STATUS_OK
+01-14 01:11:29.993  3122  3344 I libnfc_nci: [INFO:nfc_ncif.cc(399)] NFC received rsp gid:0
+01-14 01:11:29.993  3122  3344 I libnfc_nci: [INFO:nci_hrcv.cc(62)] nci_proc_core_rsp opcode:0x2
+01-14 01:11:29.993  3122  3344 I libnfc_nci: [INFO:nfa_dm_act.cc(268)] NFC_SET_CONFIG_REVT(0x5002)
+01-14 01:11:29.994  3122  3344 I libnfc_nci: [INFO:NfcAdaptation.cc(792)] NfcAdaptation::HalPrediscover
+01-14 01:11:29.994   766  3355 D NxpTml  : PN54X - Read requested.....
+01-14 01:11:29.994   766  3355 D NxpTml  : PN54X - Invoking I2C Read.....
+01-14 01:11:29.995  3122  3344 I libnfc_nci: [INFO:NfcAdaptation.cc(751)] NfcAdaptation::HalWrite
+01-14 01:11:29.997   766   766 D NxpExtns: find found MIFARE_READER_ENABLE=(0x1)
+01-14 01:11:29.997   766   766 D NxpHal  : > Polling Loop Started
+01-14 01:11:29.997   766   766 D NxpHal  : phNxpNciHal_discovery_cmd_ext
+01-14 01:11:29.997   766   766 D NfccPowerTracker: NfccPowerTracker::ProcessCmd: Enter,Recieved len :26
+01-14 01:11:29.997   766  3357 D NxpTml  : PN54X - Write requested.....
+01-14 01:11:29.997   766  3357 D NxpTml  : PN54X - Invoking I2C Write.....
+01-14 01:11:29.999   766  3357 D NxpNciX : len =  26 > 2103170B00010101020103010501800182018301850106017001
+01-14 01:11:29.999   766  3357 D NxpTml  : PN54X - I2C Write successful.....
+01-14 01:11:29.999   766  3357 D NxpTml  : PN54X - Posting Fresh Write message.....
+01-14 01:11:29.999   766  3357 D NxpTml  : PN54X - Tml Writer Thread Running................
+01-14 01:11:29.999   766  3359 D NxpHal  : write successful status = 0x0
+01-14 01:11:30.053   766  3355 D NxpTml  : PN54X - I2C Read successful.....
+01-14 01:11:30.053   766  3355 D NxpNciR : len =   4 > 41030100
+01-14 01:11:30.053   766  3355 D NxpTml  : PN54X - Posting read message.....
+01-14 01:11:30.053   766  3359 D NxpHal  : read successful status = 0x0
+01-14 01:11:30.054  3122  3344 I libnfc_nci: [INFO:nfc_ncif.cc(399)] NFC received rsp gid:1
+01-14 01:11:30.054  3122  3344 I libnfc_nci: [INFO:nfa_dm_discover.cc(3030)] returning TRUE
+01-14 01:11:30.054  3122  3344 I libnfc_nci: [INFO:nfa_dm_discover.cc(694)] event:0x4000
+01-14 01:11:30.054  3122  3344 I libnfc_nci: [INFO:nfa_dm_discover.cc(2518)] state: IDLE (0), event: DISCOVER_RSP(1) disc_flags: 0x31
+01-14 01:11:30.054  3122  3344 I libnfc_nci: [INFO:nfa_dm_discover.cc(1685)] old_state: IDLE (0), new_state: DISCOVERY (1) disc_flags: 0x11
+01-14 01:11:30.055  3122  3344 I libnfc_nci: [INFO:nfa_dm_act.cc(1557)] event:0x00
+01-14 01:11:30.055  3122  3344 I libnfc_nci: [INFO:nfa_p2p_main.cc(104)] event:0x00
+01-14 01:11:30.055   766  3355 D NxpTml  : PN54X - Read requested.....
+01-14 01:11:30.055   766  3355 D NxpTml  : PN54X - Invoking I2C Read.....
+01-14 01:11:30.055  3122  3344 I libnfc_nci: [INFO:NativeNfcManager.cpp(276)] nfaConnectionCallback: event= 30
+01-14 01:11:30.055  3122  3344 I libnfc_nci: [INFO:NativeNfcManager.cpp(301)] nfaConnectionCallback: NFA_RF_DISCOVERY_STARTED_EVT: status = 0
+01-14 01:11:30.055  3122  3344 I libnfc_nci: [INFO:nfa_dm_discover.cc(2571)] new state: DISCOVERY (1), disc_flags: 0x1
+01-14 01:11:30.055  3122  3122 I libnfc_nci: [INFO:NativeNfcTag.cpp(1819)] nativeNfcTag_releaseRfInterfaceMutexLock: sRfInterfaceMutex unlock
+01-14 01:11:30.055  3122  3122 I libnfc_nci: [INFO:PowerSwitch.cpp(258)] PowerSwitch::setModeOn(activated=0x1) : mCurrActivity=0x1
+01-14 01:11:30.055  3122  3122 I libnfc_nci: [INFO:NativeNfcManager.cpp(1306)] nfcManager_enableDiscovery: exit
+01-14 01:11:30.065     0     0 E nq-nci 6-0028: nfc_read : reading 3 bytes.
+01-14 01:11:30.055  3122  3122 I libnfc_nci: [INFO:NativeNfcManager.cpp(1788)] nfcManager_doSetScreenState: state = 8 prevScreenState= 4, discovry_param = 1
+01-14 01:11:30.062  3122  3334 D NfcService: Discovery configuration equal, not updating.

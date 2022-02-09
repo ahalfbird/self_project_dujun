@@ -1,0 +1,100 @@
+I sysui_multi_action: [757,853,758,4,854,connecteddevice.AdvancedConnectedDeviceDashboardFragment/toggle_nfc,1089,1]
+I NfcService: Enabling NFC
+I com.android.nf: ConfigFile - Parsing file '/etc/libnfc-nci.conf'
+I com.android.nf: ConfigFile - [NFC_DEBUG_ENABLED] = 0x01
+I com.android.nf: ConfigFile - [NFA_STORAGE] = "/data/vendor/nfc"
+E SELinux : avc: denied { find } for interface=vendor.nxp.nxpnfc::INxpNfc sid=u:r:nfc:s0 pid=3237 scontext=u:r:nfc:s0 tcontext=u:ob
+e_manager permissive=0
+I auditd : avc: denied { find } for interface=vendor.nxp.nxpnfc::INxpNfc sid=u:r:nfc:s0 pid=3237 scontext=u:r:nfc:s0 tcontext=u:ob
+e_manager permissive=0
+I libnfc_nci: [INFO:NfcAdaptation.cc(610)] Failed to retrieve the NXP NFC HAL!
+I libnfc_nci: [INFO:NfcAdaptation.cc(616)] NfcAdaptation::InitializeHalDeviceContext: INfc::getService()
+I libnfc_nci: [INFO:NfcAdaptation.cc(627)] NfcAdaptation::InitializeHalDeviceContext: INfc::getService() returned 0x782b6987e0 (remot
+e)
+I libnfc_nci: [INFO:NfcAdaptation.cc(634)] NfcAdaptation::InitializeHalDeviceContext: INfc::getService() returned 0x782b6987e0 (remot
+e)
+D NxpHal : persist_uicc_enabled : 0
+D NxpExtns: find found NFA_PROPRIETARY_CFG=║▒▒═▒▒p▒▒
+I libnfc_nci: [INFO:NfcAdaptation.cc(271)] NfcAdaptation::HalIoctl arg=30
+I libnfc_nci: [INFO:NfcAdaptation.cc(278)] NfcAdaptation::HalIoctl Ioctl Completed for Type=0
+I libnfc_nci: [INFO:NfcAdaptation.cc(287)] HAL_NFC_GET_NXP_CONFIG ioctl return value = 0
+I libnfc_nci: [INFO:NativeNfcManager.cpp(206)] initializeGlobalDebugEnabledFlag: level=1
+I libnfc_nci: [INFO:PowerSwitch.cpp(95)] PowerSwitch::initialize: level=PS-FULL (1)
+I libnfc_nci: [INFO:PowerSwitch.cpp(100)] PowerSwitch::initialize: desired screen-off state=1
+I libnfc_nci: [INFO:NfcAdaptation.cc(126)] initializeGlobalDebugEnabledFlag: level=1
+I libnfc_nci: [INFO:NfcAdaptation.cc(384)] NfcAdaptation::Initialize: enter
+I libnfc_nci: [INFO:NfcAdaptation.cc(410)] NfcAdaptation::Initialize: Overriding NFA_POLL_BAIL_OUT_MODE to use 1
+I libnfc_nci: [INFO:libmain.cc(196)] verify_stack_non_volatile_store
+I libnfc_nci: [INFO:CrcChecksum.cc(94)] crcChecksumVerifyIntegrity: filename=/data/vendor/nfc/nfaStorage.bin1
+I libnfc_nci: [INFO:CrcChecksum.cc(112)] crcChecksumVerifyIntegrity: data size=228
+I libnfc_nci: [INFO:CrcChecksum.cc(94)] crcChecksumVerifyIntegrity: filename=/data/vendor/nfc/nfaStorage.bin4
+I libnfc_nci: [INFO:CrcChecksum.cc(94)] crcChecksumVerifyIntegrity: filename=/data/vendor/nfc/nfaStorage.bin2
+I libnfc_nci: [INFO:CrcChecksum.cc(94)] crcChecksumVerifyIntegrity: filename=/data/vendor/nfc/nfaStorage.bin3
+I libnfc_nci: [INFO:CrcChecksum.cc(94)] crcChecksumVerifyIntegrity: filename=/data/vendor/nfc/nfaStorage.bin5
+I libnfc_nci: [INFO:NfcAdaptation.cc(448)] Initialize: preserve stack NV store
+I libnfc_nci: [INFO:gki_ulinux.cc(194)] GKI_create_task func=0x0x77d225f560 id=4 name=NFCA_TASK stack=0x0x0 stackSize=0
+I libnfc_nci: [INFO:gki_ulinux.cc(220)] GKI creating task 4, pCond/pMutex=0x0/0x0
+I libnfc_nci: [INFO:gki_ulinux.cc(262)] Leaving GKI_create_task 0x77d225f560 4 7827de9d50 NFCA_TASK 0x0 0
+I libnfc_nci: [INFO:gki_ulinux.cc(194)] GKI_create_task func=0x0x77d225f564 id=0 name=NFCA_THREAD stack=0x0x0 stackSize=0
+I libnfc_nci: [INFO:gki_ulinux.cc(220)] GKI creating task 0, pCond/pMutex=0x0/0x0
+I libnfc_nci: [INFO:gki_ulinux.cc(89)] gki_task_entry task_id=4, thread_id=7827de9d50/7827de9d50, pCond/pMutex=0x0/0x0
+I libnfc_nci: [INFO:NfcAdaptation.cc(540)] NfcAdaptation::NFCA_TASK: enter
+I libnfc_nci: [INFO:gki_ulinux.cc(423)] GKI_run enter
+I libnfc_nci: [INFO:gki_ulinux.cc(433)] Start/Stop GKI_timer_update_registered!
+I libnfc_nci: [INFO:gki_ulinux.cc(452)] GKI_run, run_cond(0x77d226aea0)=1
+I libnfc_nci: [INFO:gki_ulinux.cc(262)] Leaving GKI_create_task 0x77d225f564 0 7827cecd50 NFCA_THREAD 0x0 0
+I libnfc_nci: [INFO:gki_ulinux.cc(89)] gki_task_entry task_id=0, thread_id=7827cecd50/7827cecd50, pCond/pMutex=0x0/0x0
+I libnfc_nci: [INFO:NfcAdaptation.cc(557)] NfcAdaptation::Thread: enter
+I libnfc_nci: [INFO:gki_ulinux.cc(194)] GKI_create_task func=0x0x77d225f558 id=3 name=NFC_TASK stack=0x0x0 stackSize=0
+I libnfc_nci: [INFO:gki_ulinux.cc(220)] GKI creating task 3, pCond/pMutex=0x7827ceca10/0x7827cec9e8
+I libnfc_nci: [INFO:gki_ulinux.cc(262)] Leaving GKI_create_task 0x77d225f558 3 7827befd50 NFC_TASK 0x0 0
+I libnfc_nci: [INFO:gki_ulinux.cc(89)] gki_task_entry task_id=3, thread_id=7827befd50/7827befd50, pCond/pMutex=0x7827ceca10/0x7827cec
+9e8
+I libnfc_nci: [INFO:nfc_task.cc(352)] NFC_TASK started.
+I libnfc_nci: [INFO:gki_ulinux.cc(558)] GKI_wait task=3, pCond/pMutex = 0x7827ceca10/0x7827cec9e8
+I libnfc_nci: [INFO:gki_ulinux.cc(1090)] GKI_exit_task 0 done
+I libnfc_nci: [INFO:NfcAdaptation.cc(466)] NfcAdaptation::Initialize: exit
+I libnfc_nci: [INFO:nfa_dm_api.cc(60)] NFA_Init
+I libnfc_nci: [INFO:nfa_dm_main.cc(97)] nfa_dm_init
+I libnfc_nci: [INFO:nfa_sys_main.cc(133)] id=1, enable_cplt_mask=0x0
+I libnfc_nci: [INFO:nfa_p2p_main.cc(477)] nfa_p2p_init
+I libnfc_nci: [INFO:nfa_sys_main.cc(133)] id=3, enable_cplt_mask=0x8
+E nq-nci 6-0028: nfc_open: 10,54
+E nq-nci 6-0028: gpio_set_value disable: nfc_ioctl_power_states: info: ffffffdd6bccb000
+I libnfc_nci: [INFO:nfa_rw_main.cc(70)] nfa_rw_init
+I libnfc_nci: [INFO:nfa_sys_main.cc(133)] id=5, enable_cplt_mask=0x28
+I libnfc_nci: [INFO:nfa_ce_main.cc(76)] nfa_ce_init
+I libnfc_nci: [INFO:nfa_sys_main.cc(133)] id=6, enable_cplt_mask=0x68
+I libnfc_nci: [INFO:nfa_ee_main.cc(99)] nfa_ee_init
+I libnfc_nci: [INFO:nfa_sys_main.cc(133)] id=2, enable_cplt_mask=0x6c
+I libnfc_nci: [INFO:nfa_hci_main.cc(191)] nfa_hci_init
+I libnfc_nci: [INFO:nfa_sys_main.cc(133)] id=7, enable_cplt_mask=0xec
+I libnfc_nci: [INFO:llcp_main.cc(57)] llcp_init
+I libnfc_nci: [INFO:llcp_main.cc(89)] num_rx_buff = 9, rx_congest_start = 6, rx_congest_end = 4, max_num_ll_rx_buff = 2
+I libnfc_nci: [INFO:llcp_main.cc(102)] max_num_tx_buff = 21, max_num_ll_tx_buff = 6
+I libnfc_nci: [INFO:llcp_api.cc(369)] SAP:0x1, link_type:0x2, ServiceName:<urn:nfc:sn:sdp>
+I libnfc_nci: [INFO:llcp_api.cc(453)] Registered SAP = 0x01
+I libnfc_nci: [INFO:nfa_dm_api.cc(102)] NFA_Enable
+I libnfc_nci: [INFO:nfa_sys_main.cc(77)] NFA got event 0x0100
+I libnfc_nci: [INFO:nfa_dm_main.cc(122)] event: NFA_DM_API_ENABLE_EVT (0x00)
+I libnfc_nci: [INFO:NfcAdaptation.cc(570)] NfcAdaptation::Thread: exit
+E libnfc_nci: [ERROR:gki_ulinux.cc(98)] gki_task task_id=0 terminating
+I libnfc_nci: [INFO:nfa_dm_act.cc(433)] nfa_dm_enable
+I libnfc_nci: [INFO:nfc_main.cc(664)] NFC_Enable
+I libnfc_nci: [INFO:nfc_main.cc(326)] nfc_set_state 0 (NONE)->1 (W4_HAL_OPEN)
+I libnfc_nci: [INFO:NfcAdaptation.cc(681)] NfcAdaptation::HalOpen
+D android.hardware.nfc@1.2-impl: Nfc::open Enter
+D NxpHal : phNxpNci_MinOpen(): enter
+D NxpHal : nfc_debug_enabled : 1
+D NxpExtns: find found NXPLOG_NCIHAL_LOGLEVEL=(0x3)
+D NxpExtns: find found NXPLOG_EXTNS_LOGLEVEL=(0x3)
+D NxpExtns: find found NXPLOG_TML_LOGLEVEL=(0x3)
+D NxpExtns: find found NXPLOG_FWDNLD_LOGLEVEL=(0x3)
+D NxpExtns: find found NXPLOG_NCIX_LOGLEVEL=(0x3)
+D NxpExtns: find found NXPLOG_NCIR_LOGLEVEL=(0x3)
+D NxpNfcHal: phNxpLog_InitializeLogLevel: global =1, Fwdnld =3, extns =3, hal =3, tml =3, ncir =3, nc
+ix =3
+D NxpHal : Entering phNxpNciHal_init_monitor
+D NxpHal : Returning with SUCCESS
+D EseAdaptation: EseAdaptation::InitializeHalDeviceContext: INxpEse::tryGetService()
+E SELinux : avc: denied { find } for interface=vendor.nxp.nxpese::INxpEse sid=u:r:hal_nfc_default:s0 pid=762 scontext=u:r:hal_nfc_d
