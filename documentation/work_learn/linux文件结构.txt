@@ -1,0 +1,92 @@
+
+Linux文件目录结构详解
+
+可以参考FHS(http://www.pathname.com/fhs/)的官方文件
+
+ 	
+可分享的(shareable)			不可分享的(unshareable)
+
+/usr (软件放置处)			/etc (配置文件)					不变的(static)
+
+/opt (第三方协力软件)		/boot (开机与核心档)			不变的(static)
+
+/var/mail (使用者邮件信箱)	/var/run (程序相关)				可变动的(variable)
+
+/var/spool/news (新闻组)	/var/lock (程序相关)			可变动的(variable)
+
+ 
+
+
+可分享的(shareable): 可以分享给其他系统挂载使用的目录，包括执行文件与用户的邮件等数据， 可以分享给网络上其他主机挂载用的目录；
+不可分享的(unshareable)：本机的配置文件或者是与程序有关的socket文件等， 不适合分享给其他主机。
+不变的(static)：例如函式库、说明文件、系统管理员所管理的主机服务配置文件等等；
+可变动的(variable)：经常改变的数据，例如登录文件、一般用户可自行收受的新闻组等。
+
+
+/(root, 根目录)：	与开机系统有关；
+/usr				与软件安装/执行有关；
+/var				与系统运作过程有关。
+/bin				放置的是在单人维护模式下还能够被操作的指令。/bin下的指令可以被root与一般用户所使用，主要有：cat,chmod(修改权限), chown, date, mv, mkdir, cp, bash等等常用的指令。
+/boot				主要放置开机会使用到的文件，包括内核以及开机选项与开机配置等等。kernel常用的档名为：vmlinuz ，如果使用grub开机管理程序，则还会存在/boot/grub/这个目录。
+/dev				在Linux系统上，设备在此目录。根据设备及文件的思想, 操作该目录等于操作设备。比如/dev/null, /dev/zero, /dev/tty , /dev/lp*, / dev/hd*, /dev/sd*等等
+/etc				系统主要的设置文件几乎都在此目录，如帐号密码、服务启动设置等等。该目录的文件可以被一般用户读，但只有root有权力修改。 FHS建议不要放置可执行文件(binary)在这个目录中。 
+	/etc/init.d/		所有服务的预启动script在该目录下，如启动或关闭iptables： /etc/init.d/iptables start、/etc/init.d/ iptables stop
+	/etc/xinetd.d/ 		super daemon管理的服务的设定。
+	/etc/X11/			与X Window有关的设定。
+/home				用户主目录(home directory)。	
+	~ ：代表当前用户的根目录，而 ~guest：则代表用户名为guest的根目录。
+/lib				保存在开机时会用到的库，以及在/bin或/sbin下被使用的库。
+	/lib/modules/		保存核心相关的模块(驱动)。
+/media				保存可移除的设备。包括软碟、光碟、DVD等等设备都暂时挂载于此. 
+/mnt				如果暂时挂载额外设备，可以放置到这个目录中。早期这个目录的用途与/media相同。 在有了/media之后，这个目录用来暂时挂载。
+/opt				第三方辅助程序放置的目录 。习惯上还是放置在/usr/local目录下。
+/root				系统管理员(root)的根目录。
+/sbin				保存系统环境设定，这些指令只有root可以设置，其他用户只能查询。常见的指令包括：fdisk, fsck, ifconfig, init, mkfs等等。包括了开机、修复、还原系统的指令,是开机必要的。
+	/usr/sbin			某些服务器的相关指令保存在此.	
+	/usr/local/sbin/	保存本机自行安装的软体所产生的执行程序(system binary)。
+/srv				service，是一些网络服务启动后，这些服务需要的资源目录。 常见的服务例如WWW, FTP等等。 如WWW的网页资料就放置/srv/www/里面。
+/tmp				一般用户或正在执行的程序暂时 保存的资源。该目录对所有人开放读写权限.
+/lost+found			使用标准的ext2/ext3文件系统产生的一个目录. 当档案系统发生错误时，将一些遗失的片段保存至此。 这个目录通常会在最顶层存在，
+/proc				该目录是一个虚拟文件系统。 保存的资源都是在内存中，如kernel、进程(process)、外设状态及网络状态等等。该目录下的资源都在内存中，所以本身不占任何硬盘空间。
+/sys				跟/proc非常类似，也是一个虚拟文件系统，主要也是记录与kernel。 包括已载入的module与硬件资源等等。 这个目录同样不占硬盘空间。
+
+
+　　因为根目录与开机有关，开机过程中仅有根目录会被挂载， 其他分区则是在开机完成之后才会持续的进行挂载的行为。因此与开机过程有关的目录， 不能与根目录放到不同的分区。
+[/etc：配置文件][/bin：重要执行档][/dev：所需要的装置文件][/lib：执行档所需的函式库与核心所需的模块][/sbin：重要的系统执行文件]不可与根目录分开在不同的分区。
+
+ 
+
+
+
+
+
+二. /usr 的意义与内容：
+　　根据FHS，/usr里面放置的数据属于可分享的与不可变动的(shareable, static)， 通过网络分区的挂载，/usr可以分享给局域网络内的其他主机来使用。
+/usr是Unix Software Resource的缩写，是Unix操作系统软件资源的目录。FHS建议，将数据合理放置到该目录下的次目录.
+/usr的次目录：
+/usr/X11R6/			为X Window System重要数据放置的目录，X11R6表示最新的X版本是第11版的第6次release。
+/usr/bin/			多数的用户可用指令都放在这里。与/bin的不同之处(是否与开机过程有关)
+/usr/include/		c/c++等程序语言的头文件。
+/usr/lib/			应用程序的库、目标文件(object file)，执行文件或脚本(script)。如果是X86_64的Linux系统，会有/usr/lib64/
+/usr/local/			管理员在本机自行安装自己下载的软件(非distribution默认提供者)，建议安装到此目录，便于管理。
+/usr/sbin/			非系统正常运作所需要的系统指令。最常见的就是某些网络服务器软件的服务指令(daemon)
+/usr/share/			放置共享文件的地方，在这个目录下放置的数据不分硬件架构均可读取的数据， 几乎都是文本文件。
+/usr/share/doc		软件杂项的文件说明
+/usr/share/zoneinfo	与时区有关的时区文件
+/usr/src/			源程序建议保存至此，src有source的意思。内核源码则建议在/usr/src/linux/。
+
+ 
+三.  /var 的意义与内容：
+
+　　/var目录主要包括缓存(cache)、登录(log file)以及某些软件运行产生的文件， 包括程序文件(lock file, run file)，或者例如MySQL数据库的文件等等。
+/var的次目录有：
+/var/cache/				应用程序本身运作过程中会产生的一些cache
+/var/lib/				程序本身执行的过程中，使用到的数据文件放置的目录。在此目录下各自的软件应该有各自的目录。
+/var/lock/				应用程序产生的锁. 
+/var/log/				登录文件放置的目录。里面比较重要的文件如/var/log/messages, /var/log/wtmp(记录登入者的信息)等。
+/var/mail/				个人电子邮件的目录，不过这个目录也被放置到/var/spool/mail/目录中，通常这两个目录是互为链接文件。
+/var/run/				某些程序或者是服务启动后，会将他们的PID放置在这个目录下
+/var/spool/				这个目录通常放置一些队列数据，“队列”就是排队等待其他程序使用的数据。 这些数据被使用后通常都会被删除。信件如果暂时寄不出去会被放到/var/spool/mqueue/中， 送出后就被删除。如果是计划任务(crontab)，就会被放置到/var/spool/cron/目录中。
+
+由于FHS仅是定义出最上层(/)及次层(/usr, /var)的目录内容应该要放置的文件或目录数据，在其他次目录层级内，就可以自行来配置了。
+
