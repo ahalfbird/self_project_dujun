@@ -1,11 +1,9 @@
 #include<stdio.h>
 #include<malloc.h>
 #include<stdlib.h>
-#include<windows.h>
 #include<string.h>
 #include<time.h>
 #include<sys/time.h>
-#include<conio.h>
 
 #define PRTN putchar('\n');
 

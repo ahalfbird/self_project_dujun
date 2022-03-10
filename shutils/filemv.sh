@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "this is a bash sh to copy file"
+echo "this is a bash sh to mv file"
 
 if [[ $# != 3 ]]
 then
