@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>runoob</title>
+</head>
+<body>
+<p>{{ time }}</p>
+<p>{{ strtmp.title|truncatewords:"10" }}</p>
+<p>{{views_str|safe}}</p>
+<p>
+{% if strtmp.title > 0 and strtmp.title <= 100 %}
+<h1>strtmp.title &gt; 0 strtmp.title &lt;= 100</h1>
+{% elif strtmp.title > 100 %}
+<h1>strtmp.title &gt; 100</h1>
+{% else %}
+<h1>strtmp.title &lt; 0</h1>
+{% endif %}
+</p>
+<p>
+{% for step in strtmp.title reversed %}
+{{ forloop.counter }}
+{{ forloop.counter0 }}
+{{ forloop.revcounter }}
+{{ forloop.revcounter0 }}
+{{ forloop.first }}
+{{ forloop.last }}
+{% endfor %}
+</p>
+<p>
+{% for i,j in bookssss.items %}
+{{ i }}:{{ j }}
+{% endfor %}
+</p>
+<p>
+{#test log=======================#}
+{% if bookssss.result == strtmp.title %}
+<h1>bookssss.result = strtmp.title</h1>
+{% else %}
+<h1>bookssss.result ≠ strtmp.title</h1>
+{% endif %}
+</p>
+{%include "base.html"%}
+</body>

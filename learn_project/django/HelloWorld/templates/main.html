@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>mainurl</title>
+</head>
+<body>
+{%for urlsinglei,urlsingleij in urlstring.items%}
+<p>{{urlsinglei}} {{urlsingleij|safe}}</p>
+{%endfor%}
+</body>

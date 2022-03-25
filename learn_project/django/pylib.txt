@@ -1,0 +1,4 @@
+Scrapy   爬虫
+Pygame   游戏
+Tkinter  GUI
+EasyGui  简单Gui
